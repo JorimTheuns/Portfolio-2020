@@ -1,0 +1,239 @@
+@font-face {
+  font-family: Bitterandom zero;
+  src: url("/Bitterandom/Bitterandom-Regular-0.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bitterandom one;
+  src: url("/Bitterandom/Bitterandom-Regular-1.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bitterandom two;
+  src: url("/Bitterandom/Bitterandom-Regular-2.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bitterandom three;
+  src: url("/Bitterandom/Bitterandom-Regular-3.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bitterandom four;
+  src: url("/Bitterandom/Bitterandom-Regular-4.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bitterandom five;
+  src: url("/Bitterandom/Bitterandom-Regular-5.otf") format("opentype");
+}
+
+.brnone *{
+  font-family: 'Bitter', serif;
+}
+
+.brnone{
+  font-family: 'Bitter', serif;
+}
+
+.brzero *{
+  font-family: "Bitterandom zero", serif;
+}
+
+.brzero{
+  font-family: "Bitterandom zero", serif;
+}
+
+.brone *{
+  font-family: "Bitterandom one", serif;
+}
+
+.brone{
+  font-family: "Bitterandom one", serif;
+}
+
+.brtwo *{
+  font-family: "Bitterandom two", serif;
+}
+
+.brtwo{
+  font-family: "Bitterandom two", serif;
+}
+
+.brthree *{
+  font-family: "Bitterandom three", serif;
+}
+.brthree{
+  font-family: "Bitterandom three", serif;
+}
+
+.brfour *{
+  font-family: "Bitterandom four", serif;
+}
+.brfour{
+  font-family: "Bitterandom four", serif;
+}
+
+.brfive *{
+  font-family: "Bitterandom five", serif;
+}
+.brfive{
+  font-family: "Bitterandom five", serif;
+}
+
+.grt {
+    font-family: "Bitterandom two", serif;
+    font-size: 18px;
+    line-height: 31px;
+  }
+
+  .grt h1,
+  .grt .title,
+  .grt h2,
+  .grt h3,
+  .grt h4,
+  .grt p,
+  .grt ul,
+  .grt ol,
+  .grt blockquote,
+  .grt pre,
+  .grt .alert,
+  .grt .note,
+  .grt .box,
+  .grt .footnotes,
+  .grt ul ul,
+  .grt ul ol,
+  .grt ol ul,
+  .grt ol ol,
+  .grt blockquote.right p,
+  .grt blockquote.left p,
+  .grt .alert :last-child,
+  .grt .note :last-child,
+  .grt .box :last-child,
+  .grt .footnotes :last-child {
+    max-width: 700px;
+  }
+
+  .grt h1 {
+    font-size: 37px;
+    line-height: 59px;
+    margin-bottom: 31px;
+  }
+
+  .grt .title {
+    font-size: 47px;
+    line-height: 74px;
+    margin-bottom: 31px;
+  }
+
+  .grt h2 {
+    font-size: 29px;
+    line-height: 47px;
+    margin-top: 50px;
+    margin-bottom: 19px;
+  }
+
+  .grt h3 {
+    font-size: 23px;
+    line-height: 38px;
+    margin-top: 31px;
+    margin-bottom: 12px;
+  }
+
+  .grt h4 {
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: bold;
+    margin-bottom: 7px;
+  }
+
+  .grt p,
+  .grt ul,
+  .grt ol,
+  .grt blockquote,
+  .grt pre,
+  .grt .alert,
+  .grt .note,
+  .grt .box,
+  .grt .footnotes {
+    margin-bottom: 31px;
+  }
+
+  .grt ul,
+  .grt ol {
+    margin-left: 31px;
+  }
+
+  .grt li {
+    margin-bottom: 12px;
+  }
+
+  .grt blockquote {
+    padding-left: 19px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.15);
+    border-width: 0 0 0 7px;
+  }
+
+  .grt sub,
+  .grt sup {
+    padding: 0 1px;
+  }
+
+  .grt code,
+  .grt pre,
+  .grt kbd {
+    font-size: 16px;
+  }
+
+  .grt code {
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 3px 4px;
+    border-radius: 7px;
+    margin: 0 1px;
+  }
+
+  .grt pre {
+    padding: 12px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.15);
+    border-width: 0 0 0 7px;
+  }
+
+  .grt kbd {
+    background-color: #fff;
+    padding: 3px 4px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.45);
+    margin: 0 1px;
+  }
+
+  .grt .alert,
+  .grt .note,
+  .grt .box {
+    padding: 19px;
+  }
+
+  .grt .footnotes {
+    font-size: 14px;
+    line-height: 25px;
+    padding-top: 19px;
+    border-top: 1px dotted rgba(0, 0, 0, 0.15);
+  }
+
+  .grt .footnotes p {
+    margin-bottom: 19px;
+  }
+
+  .grt ul ul,
+  .grt ul ol,
+  .grt ol ul,
+  .grt ol ol,
+  .grt blockquote.right p,
+  .grt blockquote.left p,
+  .grt .alert :last-child,
+  .grt .note :last-child,
+  .grt .box :last-child,
+  .grt .footnotes :last-child {
+    margin-bottom: 0;
+  }

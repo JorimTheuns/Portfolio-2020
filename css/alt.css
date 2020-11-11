@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*transition: opacity 1s ease-in-out;*/
+}
+
+/*img, p, h1, h2, h3 {
+  transition: transform .5s, opacity .5s ease-out;
+  transform: translateX(50px);
+  opacity: 0.2;
+  transform-origin: bottom;
+}
+
+p.active, img.active, h1.active, h2.active, h3.active {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+*/
+
+.part > * {
+    transition: transform .5s, opacity .5s ease-out;
+  transform: translateX(50px);
+  opacity: 0.2;
+  transform-origin: bottom;
+}
+.part > *.active{
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+html {
+  font-family: sans-serif;
+  scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-points-y: repeat(100vh);
+}
+
+.section-container{
+  scroll-snap-align: start;
+  scroll-snap-type: mandatory;
+  scroll-snap-type: x mandatory;
+  height: 100vh;
+}
+
+.section-title{
+  /*height: 10vh;*/
+}
+
+
+.section-title h1{
+  margin: 0;
+  padding 16px;
+  height: 10vh;
+}
+
+
+section {
+  border-bottom: 1px solid black;
+  height: 90vh;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.part {
+
+  min-width: 50vw;
+  /*scroll-snap-align: start;*/
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.part.thick{
+  min-width: 100vw;
+}
+
+/*this is for plain grid*/
+
+/*video {
+  filter: brightness(0.5);
+}*/
+
+.plain-grid {
+  display: grid;
+  grid-template-columns: minmax(700px, min-content) 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'hd im''tx im';
+  grid-column-gap: calc(5px + (100 - 5) * ((100vw - 400px) / (1600 - 400)));
+}
+
+.plain-grid h1 {
+  position: relative;
+  grid-area: hd;
+  width: 100%;
+  left: 0;
+  font-size: calc(1rem + 3vw);
+}
+
+
+.plain-grid .text {
+  grid-area: tx;
+}
+
+.plain-grid img {
+  grid-area: im;
+  max-width: calc(50vw - calc(5px + (100 - 5) * ((100vw - 400px) / (1600 - 400))));
+  max-height: calc(100vh - ((5px + (100 - 5) * ((100vw - 400px) / (1600 - 400)))) * 2);
+}
+
+.plain-grid .canvas-container {
+  position: relative;
+  grid-area: im;
+  max-width: calc(50vw - calc(5px + (100 - 5) * ((100vw - 400px) / (1600 - 400))));
+  max-height: calc(100vh - ((5px + (100 - 5) * ((100vw - 400px) / (1600 - 400)))) * 2);
+}
+
+/*this is for background vid*/
+
+.vid-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 20% 50% auto;
+  /*grid-column-gap: calc(5px + (100 - 5) * ((100vw - 400px) / (1600 - 400)));*/
+  text-align: left;
+  z-index: -200;
+}
+
+.vid-grid .container {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vid-grid video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+  opacity:.1;
+}
+
+/*
+.vid-grid video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}*/
+
+.vid-grid h1 {
+  position: relative;
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  left: 0;
+}
+
+.vid-grid .canvas-container {
+  position: relative;
+  grid-column: 2;
+  grid-row: 2;
+  left: 0;
+}
+
+.vid-grid .text {
+  position: relative;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.vid-grid img {
+  grid-area: im;
+  max-width: calc(50vw - calc(5px + (100 - 5) * ((100vw - 400px) / (1600 - 400))));
+  max-height: calc(100vh - ((5px + (100 - 5) * ((100vw - 400px) / (1600 - 400)))) * 2);
+}
+
+/* THIS IS FOR IMAGES */
+
+
+
+/* GENERAL STUFF */
+
+.invert {
+  color: white;
+  background-color: black;
+}
+
+.inactive > * {
+  opacity: 0;
+}
+
+#section-tooltip {
+  position: fixed;
+  background: white;
+  padding: 3px;
+  margin: 0px;
+  transition: opacity .4s ease-in-out;
+}
+
+#section-tooltip.inactive {
+  opacity: 0;
+}
+
+#part-tooltip {
+  position: fixed;
+  background: white;
+  padding: 3px;
+  margin: 0px;
+  transition: opacity .4s ease-in-out;
+}
+
+#part-tooltip.inactive {
+  opacity: 0;
+}
+
+canvas{
+  display: block;
+}

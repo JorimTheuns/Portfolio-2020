@@ -1,0 +1,434 @@
+/*@font-face {
+  font-family: Bitterandom zero;
+  src: url("/Bitterandom/Bitterandom-Regular-0.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bitterandom one;
+  src: url("/Bitterandom/Bitterandom-Regular-1.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bitterandom two;
+  src: url("/Bitterandom/Bitterandom-Regular-2.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bitterandom three;
+  src: url("/Bitterandom/Bitterandom-Regular-3.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bitterandom four;
+  src: url("/Bitterandom/Bitterandom-Regular-4.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bitterandom five;
+  src: url("/Bitterandom/Bitterandom-Regular-5.otf") format("opentype");
+}*/
+
+@font-face {
+  font-family: Untitled serif regular;
+  src: url("/fonts/untitled-serif-test-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: Untitled serif regular italic;
+  src: url("/fonts/untitled-serif-test-regular-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: Untitled serif black;
+  src: url("/fonts/untitled-serif-test-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: Untitled serif black italic;
+  src: url("/fonts/untitled-serif-test-bold-italic.woff") format("woff");
+}
+
+.grt{
+  font-family: "Untitled serif regular", serif;
+}
+
+.grt .note{
+  font-family: "Untitled serif black italic", serif;
+}
+
+/*
+.brnone * {
+  font-family: 'Bitter', serif;
+}
+
+.brnone {
+  font-family: 'Bitter', serif;
+}
+
+.brzero * {
+  font-family: "Bitterandom zero", serif;
+}
+
+.brzero {
+  font-family: "Bitterandom zero", serif;
+}
+
+.brone * {
+  font-family: "Bitterandom one", serif;
+}
+
+.brone {
+  font-family: "Bitterandom one", serif;
+}
+
+.brtwo * {
+  font-family: "Bitterandom two", serif;
+}
+
+.brtwo {
+  font-family: "Bitterandom two", serif;
+}
+
+.brthree * {
+  font-family: "Bitterandom three", serif;
+}
+
+.brthree {
+  font-family: "Bitterandom three", serif;
+}
+
+.brfour * {
+  font-family: "Bitterandom four", serif;
+}
+
+.brfour {
+  font-family: "Bitterandom four", serif;
+}
+
+.brfive * {
+  font-family: "Bitterandom five", serif;
+}
+
+.brfive {
+  font-family: "Bitterandom five", serif;
+}
+*/
+.grt {
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.grt h1,
+.grt .title,
+.grt h2,
+.grt h3,
+.grt h4,
+.grt p,
+.grt ul,
+.grt ol,
+.grt blockquote,
+.grt pre,
+.grt .alert,
+.grt .note,
+.grt .box,
+.grt .footnotes,
+.grt ul ul,
+.grt ul ol,
+.grt ol ul,
+.grt ol ol,
+.grt blockquote.right p,
+.grt blockquote.left p,
+.grt .alert :last-child,
+.grt .note :last-child,
+.grt .box :last-child,
+.grt .footnotes :last-child {
+  max-width: 544px;
+}
+
+.grt h1 {
+  font-size: 33px;
+  line-height: 52px;
+  margin-bottom: 27px;
+}
+
+.grt .title {
+  font-size: 42px;
+  line-height: 65px;
+  margin-bottom: 27px;
+}
+
+.grt h2 {
+  font-size: 26px;
+  line-height: 42px;
+  margin-top: 44px;
+  margin-bottom: 17px;
+}
+
+.grt h3 {
+  font-size: 20px;
+  line-height: 33px;
+  margin-top: 27px;
+  margin-bottom: 11px;
+}
+
+.grt h4 {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.grt p,
+.grt ul,
+.grt ol,
+.grt blockquote,
+.grt pre,
+.grt .alert,
+.grt .note,
+.grt .box,
+.grt .footnotes {
+  margin-bottom: 27px;
+}
+
+.grt ul,
+.grt ol {
+  margin-left: 27px;
+}
+
+.grt li {
+  margin-bottom: 11px;
+}
+
+.grt blockquote {
+  padding-left: 17px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-width: 0 0 0 7px;
+}
+
+.grt sub,
+.grt sup {
+  padding: 0 1px;
+}
+
+.grt code,
+.grt pre,
+.grt kbd {
+  font-size: 15px;
+}
+
+.grt code {
+  background-color: rgba(0, 0, 0, 0.08);
+  padding: 3px 4px;
+  border-radius: 7px;
+  margin: 0 1px;
+}
+
+.grt pre {
+  padding: 11px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-width: 0 0 0 7px;
+}
+
+.grt kbd {
+  background-color: #fff;
+  padding: 3px 4px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.45);
+  margin: 0 1px;
+}
+
+.grt .alert,
+.grt .note,
+.grt .box {
+  padding: 17px;
+}
+
+.grt .footnotes {
+  font-size: 13px;
+  line-height: 23px;
+  padding-top: 17px;
+  border-top: 1px dotted rgba(0, 0, 0, 0.15);
+}
+
+.grt .footnotes p {
+  margin-bottom: 17px;
+}
+
+.grt ul ul,
+.grt ul ol,
+.grt ol ul,
+.grt ol ol,
+.grt blockquote.right p,
+.grt blockquote.left p,
+.grt .alert :last-child,
+.grt .note :last-child,
+.grt .box :last-child,
+.grt .footnotes :last-child {
+  margin-bottom: 0;
+}
+
+/*@media all and (min-width: 0px) {
+  .grt {
+	font-size: 14px;
+	line-height: 24px;
+  }
+
+  .grt h1,
+  .grt .title,
+  .grt h2,
+  .grt h3,
+  .grt h4,
+  .grt p,
+  .grt ul,
+  .grt ol,
+  .grt blockquote,
+  .grt pre,
+  .grt .alert,
+  .grt .note,
+  .grt .box,
+  .grt .footnotes,
+  .grt ul ul,
+  .grt ul ol,
+  .grt ol ul,
+  .grt ol ol,
+  .grt blockquote.right p,
+  .grt blockquote.left p,
+  .grt .alert :last-child,
+  .grt .note :last-child,
+  .grt .box :last-child,
+  .grt .footnotes :last-child {
+    max-width: 476px;
+  }
+
+  .grt h1 {
+    font-size: 29px;
+    line-height: 46px;
+    margin-bottom: 24px;
+  }
+
+  .grt .title {
+    font-size: 37px;
+    line-height: 57px;
+    margin-bottom: 24px;
+  }
+
+  .grt h2 {
+    font-size: 23px;
+    line-height: 37px;
+    margin-top: 39px;
+    margin-bottom: 15px;
+  }
+
+  .grt h3 {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 24px;
+    margin-bottom: 9px;
+  }
+
+  .grt h4 {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  .grt p,
+  .grt ul,
+  .grt ol,
+  .grt blockquote,
+  .grt pre,
+  .grt .alert,
+  .grt .note,
+  .grt .box,
+  .grt .footnotes {
+    margin-bottom: 24px;
+  }
+
+  .grt ul,
+  .grt ol {
+    margin-left: 24px;
+  }
+
+  .grt li {
+    margin-bottom: 9px;
+  }
+
+  .grt blockquote {
+    padding-left: 15px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.15);
+    border-width: 0 0 0 6px;
+  }
+
+  .grt sub,
+  .grt sup {
+    padding: 0 1px;
+  }
+
+  .grt code,
+  .grt pre,
+  .grt kbd {
+    font-size: 13px;
+  }
+
+  .grt code {
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 3px 4px;
+    border-radius: 6px;
+    margin: 0 1px;
+  }
+
+  .grt pre {
+    padding: 9px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.15);
+    border-width: 0 0 0 6px;
+  }
+
+  .grt kbd {
+    background-color: #fff;
+    padding: 3px 4px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.45);
+    margin: 0 1px;
+  }
+
+  .grt .alert,
+  .grt .note,
+  .grt .box {
+    padding: 15px;
+  }
+
+  .grt .footnotes {
+    font-size: 11px;
+    line-height: 19px;
+    padding-top: 15px;
+    border-top: 1px dotted rgba(0, 0, 0, 0.15);
+  }
+
+  .grt .footnotes p {
+    margin-bottom: 15px;
+  }
+
+  .grt ul ul,
+  .grt ul ol,
+  .grt ol ul,
+  .grt ol ol,
+  .grt blockquote.right p,
+  .grt blockquote.left p,
+  .grt .alert :last-child,
+  .grt .note :last-child,
+  .grt .box :last-child,
+  .grt .footnotes :last-child {
+    margin-bottom: 0;
+  }
+
+  @media all and (min-width: 762px) {
+    .grt {
+      /*padding: 31px;
+    }
+  }
+}*/
