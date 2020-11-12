@@ -11,7 +11,7 @@ let observer;
 let options = {
   root: null,
   rootMargin: '-100px',
-  threshold: .5
+  threshold: .2
 }
 
 let callback = (entries, observer) => {
@@ -46,8 +46,11 @@ let mainCallback = (entries, mainObserver) => {
       $(".section-content").animate({
         scrollLeft: 0
       }, "slow");
+      $(entry.target).parent().removeClass("active");
+    } else {
+      $(entry.target).parent().addClass("active");
     }
-  })
+  });
 };
 
 mainObserver = new IntersectionObserver(mainCallback, mainOptions);
