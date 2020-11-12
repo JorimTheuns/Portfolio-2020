@@ -7,24 +7,24 @@
   font-family: "Aesthet Nova", serif;
   font-size: 12px;
   line-height: 20px;
-  font-size: calc(12px + 6 * ((100vw - 400px) / (1600 - 400)));
-  line-height: calc(20px + 10 * ((100vw - 400px) / (1600 - 400)));
+  font-size: calc(12px + 6 * ((100vh - 400px) / 600));
+  line-height: calc(20px + 10 * ((100vh - 400px) / 600));
 }
 
 .grt h1 {
   font-size: 25px;
   line-height: 39px;
 
-  font-size: calc(25px + 12.5 * ((100vw - 400px) / (1200)));
-  line-height: calc(39px + 19.5 * ((100vw - 400px) / (1200)));
+  font-size: calc(25px + 12.5 * ((100vh - 400px) / 600));
+  line-height: calc(39px + 19.5 * ((100vh - 400px) / 600));
 }
 
 .grt .title {
   font-size: 50px;
   line-height: 78px;
 
-  font-size: calc(50px + 15.5 * ((100vw - 400px) / (1200)));
-  line-height: calc(78px + 24 * ((100vw - 400px) / (1200)));
+  font-size: calc(50px + 15.5 * ((100vh - 400px) / 600));
+  line-height: calc(78px + 24 * ((100vh - 400px) / 600));
 }
 
 .grt h2 {
@@ -32,8 +32,8 @@
   line-height: 31px;
   margin-top: 32px;
 
-  font-size: calc(19px + 9.5 * ((100vw - 400px) / (1200)));
-  line-height: calc(31px + 15.5 * ((100vw - 400px) / (1200)));
+  font-size: calc(19px + 9.5 * ((100vh - 400px) / 600));
+  line-height: calc(31px + 15.5 * ((100vh - 400px) / 600));
 }
 
 .grt h3 {
@@ -41,8 +41,8 @@
   line-height: 25px;
   margin-top: 20px;
 
-  font-size: calc(15px + 7.5 * ((100vw - 400px) / (1200)));
-  line-height: calc(25px + 12.5 * ((100vw - 400px) / (1200)));
+  font-size: calc(15px + 7.5 * ((100vh - 400px) / 600));
+  line-height: calc(25px + 12.5 * ((100vh - 400px) / 600));
 }
 
 .grt h4 {
@@ -50,8 +50,8 @@
   line-height: 20px;
   font-weight: bold;
 
-  font-size: calc(12px + 6 * ((100vw - 400px) / (1200)));
-  line-height: calc(20px + 10 * ((100vw - 400px) / (1200)));
+  font-size: calc(12px + 6 * ((100vh - 400px) / 600));
+  line-height: calc(20px + 10 * ((100vh - 400px) / 600));
 }
 
 .grt p,
@@ -74,25 +74,25 @@
 
 .grt blockquote {
   padding-left: 12px;
-  padding-left: calc(12px + 6 * ((100vw - 400px) / (1200)));
+  padding-left: calc(12px + 6 * ((100vh - 400px) / (1200)));
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.15);
   border-width: 0 0 0 4px;
-  border-left: calc(4px + 2 * ((100vw - 400px) / (1200)));
+  border-left: calc(4px + 2 * ((100vh - 400px) / (1200)));
 
 }
 
 .grt sub,
 .grt sup {
   padding: 0 1px;
-  padding: 0 calc(1px + .5 * ((100vw - 400px) / (1200)));
+  padding: 0 calc(1px + .5 * ((100vh - 400px) / (1200)));
 }
 
 .grt code,
 .grt pre,
 .grt kbd {
   font-size: 11px;
-  font-size: calc(11px + 5.5 * ((100vw - 400px) / (1200)));
+  font-size: calc(11px + 5.5 * ((100vh - 400px) / (1200)));
 }
 
 .grt code {
