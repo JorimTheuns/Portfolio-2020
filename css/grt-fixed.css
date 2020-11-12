@@ -20,11 +20,11 @@
 }
 
 .grt .title {
-  font-size: 31px;
-  line-height: 48px;
+  font-size: 50px;
+  line-height: 78px;
 
-  font-size: calc(31px + 15.5 * ((100vw - 400px) / (1200)));
-  line-height: calc(48px + 24 * ((100vw - 400px) / (1200)));
+  font-size: calc(50px + 15.5 * ((100vw - 400px) / (1200)));
+  line-height: calc(78px + 24 * ((100vw - 400px) / (1200)));
 }
 
 .grt h2 {
