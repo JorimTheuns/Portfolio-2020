@@ -15,13 +15,14 @@ html{
   font-family: "Aesthet Nova", sans-serif;
   overflow-y: scroll;
   scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
   scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
 section {
+  scroll-snap-align: start;
   height: 100vh;
   display: flex;
   flex-direction: column;
