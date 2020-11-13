@@ -11,20 +11,22 @@
   transition: all ease .4s;
 }
 
-html {
+html{
   font-family: "Aesthet Nova", sans-serif;
-  scroll-snap-type: mandatory;
-  scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-destination: 0 0;
+  scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  scroll-snap-points-y: repeat(100vh);
+}
+
+body{
+  scroll-snap-type: y mandatory;
 }
 
 section {
-  scroll-snap-align: start;
-  scroll-snap-type: mandatory;
-  scroll-snap-type: x mandatory;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -72,6 +74,7 @@ section.blue::before {
 }
 
 .section-title {
+  scroll-snap-align: start;
   margin: 0;
   padding 16px;
   position: absolute;
@@ -115,8 +118,8 @@ section.blue::before {
   position: relative;
   display: grid;
   grid-template-rows: 1fr;
-  /*grid-auto-columns: calc(320px + 500 * ((100vw - 320px) / (1200)));*/
-  grid-auto-columns: minmax(min-content, 100vw);
+  /*grid-auto-columns: calc(320px + 500 * ((100vw - 320px) / (1200)));
+  grid-auto-columns: minmax(min-content, 100vw);*/
   grid-auto-flow: column;
   grid-gap: calc(32px + 32 * ((100vw - 320px) / (1200)));
   -webkit-overflow-scrolling: touch;
