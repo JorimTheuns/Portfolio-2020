@@ -16,10 +16,15 @@ let options = {
 
 let callback = (entries, observer) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
+    let el = $(entry.target);
+    if (el.has("video").length == 0) {
+      if (entry.isIntersecting) {
+        $(entry.target).addClass("active");
+      } else {
+        $(entry.target).removeClass("active");
+      }
+    } else{
       $(entry.target).addClass("active");
-    } else {
-      $(entry.target).removeClass("active");
     }
   })
 };
