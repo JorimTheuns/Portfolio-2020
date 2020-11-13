@@ -85,7 +85,7 @@ function doSomething(target, pos) {
   }, "slow");
   $("html, body").stop().animate({
     scrollTop: $(target).parent().offset().top
-  }, "slow");
+  }, "fast");
 }
 
 /*let mainObserver;
