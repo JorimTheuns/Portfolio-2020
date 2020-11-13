@@ -23,7 +23,7 @@ let callback = (entries, observer) => {
       } else {
         $(entry.target).removeClass("active");
       }
-    } else{
+    } else {
       $(entry.target).addClass("active");
     }
   })
@@ -49,7 +49,7 @@ let mainCallback = (entries, mainObserver) => {
   entries.forEach(entry => {
     if (entry.isIntersecting == false) {
       $(".section-content").animate({
-        scrollLeft: 0
+        scrollLeft: last_known_scroll_position
       }, "slow");
       $(entry.target).parent().removeClass("active");
     } else {
@@ -64,7 +64,29 @@ let mainTargets = document.querySelectorAll(".section-content");
 
 mainTargets.forEach(mainTarget => {
   mainObserver.observe(mainTarget);
+  mainTarget.addEventListener('scroll', function (e) {
+    last_known_scroll_position = mainTarget.scrollY;
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        doSomething(mainTarget, last_known_scroll_position);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
 });
+
+let last_known_scroll_position = 0;
+let ticking = false;
+
+function doSomething(target, pos) {
+  $(target).animate({
+    scrollLeft: pos
+  }, "slow");
+  $("html, body").stop().animate({
+    scrollTop: $(target).parent().offset().top
+  }, "slow");
+}
 
 /*let mainObserver;
 
