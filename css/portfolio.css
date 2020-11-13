@@ -15,15 +15,10 @@ html{
   font-family: "Aesthet Nova", sans-serif;
   overflow-y: scroll;
   scroll-snap-points-y: repeat(100vh);
-  scroll-snap-destination: 0 0;
   scroll-snap-type: y mandatory;
   scroll-snap-type: mandatory;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-}
-
-body{
-  scroll-snap-type: y mandatory;
 }
 
 section {
@@ -74,7 +69,6 @@ section.blue::before {
 }
 
 .section-title {
-  scroll-snap-align: start;
   margin: 0;
   padding 16px;
   position: absolute;
