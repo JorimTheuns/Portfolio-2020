@@ -44,18 +44,15 @@ section.grey {
   background: #8F8F8F;
 }
 
-section .part * img,
-section .part * video,
-section .part * iframe {
+section .part .full video,
+section .part .full iframe {
   border: solid black 2px;
 }
 
-section.invert .part * img,
-section.invert .part * video,
-section.invert .part * iframe,
-section.blue .part * img,
-section.blue .part * video,
-section.blue .part * iframe {
+section.invert .part .full video,
+section.invert .part .full iframe,
+section.blue .part .full video,
+section.blue .part .full iframe {
   border: solid white 2px;
 }
 
