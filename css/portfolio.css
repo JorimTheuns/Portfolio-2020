@@ -11,7 +11,7 @@
   transition: transform ease .4s;
 }
 
-html{
+html {
   font-family: "Aesthet Nova", sans-serif;
   overflow-y: scroll;
   scroll-snap-points-y: repeat(100vh);
@@ -44,6 +44,22 @@ section.grey {
   background: #8F8F8F;
 }
 
+section .part * img,
+section .part * video,
+section .part * iframe {
+  border: solid black 2px;
+}
+
+section.invert .part * img,
+section.invert .part * video,
+section.invert .part * iframe,
+section.blue .part * img,
+section.blue .part * video,
+section.blue .part * iframe {
+  border: solid white 2px;
+}
+
+
 section::before {
   content: " ";
   position: absolute;
@@ -52,13 +68,13 @@ section::before {
   height: 0;
   border-bottom: solid black 2px;
   border-top: 0px;
-  transform: scale(0,1);
+  transform: scale(0, 1);
   transform-origin: left;
   transition: transform ease 2s;
 }
 
-section.active::before{
-  transform: scale(1,1);
+section.active::before {
+  transform: scale(1, 1);
 }
 
 section.invert::before {
@@ -164,26 +180,26 @@ section.blue::before {
 }*/
 
 
-.part.highlight{
-  padding:16px;
+.part.highlight {
+  padding: 16px;
   margin: 0 16px;
   border-radius: 32px;
 }
 
-.part.highlight img{
+.part.highlight img {
   border-radius: 16px;
 }
 
-.part.highlight video{
+.part.highlight video {
   border-radius: 16px;
   max-height: calc(100vh - 112px);
 }
 
-.grey .part.active.highlight{
+.grey .part.active.highlight {
   background: #ffff;
 }
 
-.blue .part.active.highlight{
+.blue .part.active.highlight {
   background: #000f;
 }
 
@@ -234,6 +250,7 @@ section.blue::before {
   flex-direction: column;
   justify-content: flex-end;
   flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
   height: calc((100vh - 80px) / 2);
   width: auto;
   padding: 0 0 16px 0;
@@ -248,6 +265,7 @@ section.blue::before {
   flex-direction: column;
   justify-content: flex-start;
   flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
   height: calc((100vh - 80px) / 2);
   width: auto;
   padding: 16px 0 0 0;
@@ -262,6 +280,7 @@ section.blue::before {
   flex-direction: column;
   justify-content: center;
   flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
   height: calc(100vh - 80px);
   width: auto;
   padding: 0;
@@ -296,16 +315,16 @@ section.blue::before {
   flex-basis: 0;
   height: 100%;
   flex-grow: 2;
-}*/
+}
 
 .part img {
   width: auto;
   flex-shrink: 2;
   object-fit: scale-down;
-}
+}*/
 
-.img-cont{
-  width:  100%;
+.img-cont {
+  width: 100%;
   height: 100%;
 }
 
@@ -313,27 +332,35 @@ section.blue::before {
   object-position: 0 100%;
   max-height: calc((100vh - 80px) / 2);
   flex: 0 1 auto;
+  min-height: 0px;
+  overflow: hidden;
 }
 
 .part .bottom * {
   object-position: 0 0;
   max-height: calc((100vh - 80px) / 2);
   flex: 0 1 auto;
+  min-height: 0px;
+  overflow: hidden;
 }
 
 .part .full * {
   object-position: 0 50%;
   max-height: calc((100vh - 80px));
   flex: 0 1 auto;
+  min-height: 0px;
+  overflow: hidden;
 }
 
-.part * img, .part * video, .part * iframe {
+.part * img,
+.part * video,
+.part * iframe {
   max-width: calc(100vw - 96px);
 }
 
 @media screen and (max-width: 596px) {
   .part * * {
-  max-width: calc(100vw - 96px);
+    max-width: calc(100vw - 96px);
   }
 }
 
@@ -359,12 +386,12 @@ section.blue::before {
   top:0;
   left:0;
 }
-*/ 
+*/
 
-video::before{
+video::before {
   content: " ";
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   background: #aaa;
   width: 100%;
@@ -400,9 +427,9 @@ iframe {
   cursor: pointer;
 }
 
-.button:hover{
-    color: #fff;
-    background-color: #000;
+.button:hover {
+  color: #fff;
+  background-color: #000;
 }
 
 h1,

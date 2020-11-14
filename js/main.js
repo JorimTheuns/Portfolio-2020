@@ -20,8 +20,6 @@ let callback = (entries, observer) => {
     if (el.has("video").length == 0) {
       if (entry.isIntersecting) {
         $(entry.target).addClass("active");
-      } else {
-        $(entry.target).removeClass("active");
       }
     } else {
       $(entry.target).addClass("active");
