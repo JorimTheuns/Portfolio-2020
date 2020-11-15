@@ -111,7 +111,7 @@ section.blue::before {
 }
 
 .section-title img.arrow.hidden {
-  transform: scale(0, 1);
+  transform: translateX(-64px);
 }
 
 .section-title h1 {
