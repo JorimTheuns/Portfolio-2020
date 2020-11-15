@@ -66,7 +66,7 @@ mainTargets.forEach(mainTarget => {
     last_known_scroll_position = mainTarget.scrollY;
     if (!ticking) {
       window.requestAnimationFrame(function () {
-        doSomething(mainTarget, last_known_scroll_position);
+        //doSomething(mainTarget, last_known_scroll_position);
         ticking = false;
       });
       ticking = true;
@@ -156,9 +156,11 @@ $(".section-content").scroll(function () {
   if (width > 100) {
     $('.back-bttn').addClass("turned");
     $('.back-bttn.first').removeClass("hidden");
+    $('.back-bttn.first').parent().removeClass("shift");
   } else {
     $('.back-bttn').removeClass("turned");
     $('.back-bttn.first').addClass("hidden");
+    $('.back-bttn.first').parent().addClass("shift");
   }
 });
 $(document).ready(function () {

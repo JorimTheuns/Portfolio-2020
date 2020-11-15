@@ -19,6 +19,9 @@ html {
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  font-weight: normal;
 }
 
 section {
@@ -108,7 +111,7 @@ section.blue::before {
 }
 
 .section-title img.arrow.hidden {
-  opacity: 0;
+  transform: scale(0, 1);
 }
 
 .section-title h1 {
@@ -117,9 +120,15 @@ section.blue::before {
   padding: 16px;
   padding-left: 0;
   display: inline-block;
-  position: absolute;
+  position: relative;
   left: 64px;
   width: calc(100vw - 64px);
+}
+
+@media screen and (max-width: 596px) {
+  .section-title.shift {
+    transform: translateX(-48px);
+  }
 }
 
 .section-content {
@@ -144,7 +153,7 @@ section.blue::before {
 }
 
 @media screen and (max-width: 596px) {
-  .section-content{
+  .section-content {
     padding-left: 16px;
   }
 }
@@ -336,7 +345,9 @@ section.blue::before {
   height: 100%;
 }
 
-.part * img, .part * video, .part * iframe{
+.part * img,
+.part * video,
+.part * iframe {
   min-height: 0px;
   overflow: hidden;
 }
