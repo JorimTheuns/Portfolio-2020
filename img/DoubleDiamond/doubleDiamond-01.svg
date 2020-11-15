@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1620" height="1000" viewBox="0 0 1620 1000">
+  <defs>
+    <style>
+      .a, .b {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      stroke-width:2px;
+      }
+      .b {
+      fill: #8a8a8a;
+      }
+    </style>
+  </defs>
+    <path vector-effect="non-scaling-stroke" class="b" d="M1,499,385.7,975.1a25,25,0,0,0,38.8.1L790.7,528.6a24.9,24.9,0,0,1,38.6,0l366.2,446.7a25.1,25.1,0,0,0,38.8-.1l371.9-459.5a24.7,24.7,0,0,0,0-31.4L1233.3,24.8a24.9,24.9,0,0,0-38.7,0L829.3,471.4a25,25,0,0,1-38.7,0L424.5,24.7a25.1,25.1,0,0,0-38.8.1L1,500"/>
+  <rect vector-effect="non-scaling-stroke" class="a" x="1" y="1" width="78" height="998"/>
+</svg>

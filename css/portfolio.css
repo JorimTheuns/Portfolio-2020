@@ -48,18 +48,35 @@ section.grey {
 }
 
 section .part .full video,
-section .part .full img,
+section .part .full:not(.key-moment) img,
 section .part .full iframe {
   border: solid black 2px;
 }
 
 section.invert .part .full video,
-section.invert .part .full img,
+section.invert .part .full:not(.key-moment) img,
 section.invert .part .full iframe,
 section.blue .part .full video,
-section.blue .part .full img,
+section.blue .part .full:not(.key-moment) img,
 section.blue .part .full iframe {
   border: solid white 2px;
+}
+
+
+.key-content{
+  height:10%;
+  position: relative;
+}
+
+.svg{
+  stroke-width: 2px;
+  flex-basis: 1000px;
+  height:100%;
+}
+
+.key-content h1 {
+  position: absolute;
+  bottom: 0px;
 }
 
 
@@ -346,6 +363,7 @@ section.blue::before {
 }
 
 .part * img,
+.part * object,
 .part * video,
 .part * iframe {
   min-height: 0px;
@@ -371,6 +389,7 @@ section.blue::before {
 }
 
 .part * img,
+.part * object,
 .part * video,
 .part * iframe {
   max-width: calc(100vw - 96px);
