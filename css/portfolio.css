@@ -140,6 +140,7 @@ section.blue::before {
   padding-right: 64p;
   padding-top: 64px;
   padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
 }
 
 @media screen and (max-width: 596px) {
@@ -163,6 +164,7 @@ section.blue::before {
 }
 
 .part {
+  scroll-snap-align: center;
   max-width: 100vw;
   min-width: max-content;
   /*scroll-snap-align: start;*/

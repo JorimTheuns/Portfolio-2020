@@ -1,10 +1,4 @@
-@font-face {
-  font-family: "Aesthet Nova";
-  src: url("../fonts/AesthetNova-Regular.woff2") format("woff");
-}
-
 .grt {
-  font-family: "Aesthet Nova", serif;
   font-size: 12px;
   line-height: 20px;
   font-size: calc(12px + 6 * ((100vh - 400px) / 600));
