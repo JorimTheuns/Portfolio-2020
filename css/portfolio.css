@@ -45,13 +45,16 @@ section.grey {
 }
 
 section .part .full video,
+section .part .full img,
 section .part .full iframe {
   border: solid black 2px;
 }
 
 section.invert .part .full video,
+section.invert .part .full img,
 section.invert .part .full iframe,
 section.blue .part .full video,
+section.blue .part .full img,
 section.blue .part .full iframe {
   border: solid white 2px;
 }
@@ -133,10 +136,16 @@ section.blue::before {
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding: calc(8px + 56 * ((100vw - 320px) / (1200)));
   padding-left: 64px;
+  padding-right: 64p;
   padding-top: 64px;
   padding-bottom: 16px;
+}
+
+@media screen and (max-width: 596px) {
+  .section-content{
+    padding-left: 16px;
+  }
 }
 
 /*Scrollbars*/
@@ -325,28 +334,27 @@ section.blue::before {
   height: 100%;
 }
 
+.part * img, .part * video, .part * iframe{
+  min-height: 0px;
+  overflow: hidden;
+}
+
 .part .top * {
   object-position: 0 100%;
   max-height: calc((100vh - 80px) / 2);
   flex: 0 1 auto;
-  min-height: 0px;
-  overflow: hidden;
 }
 
 .part .bottom * {
   object-position: 0 0;
   max-height: calc((100vh - 80px) / 2);
   flex: 0 1 auto;
-  min-height: 0px;
-  overflow: hidden;
 }
 
 .part .full * {
   object-position: 0 50%;
   max-height: calc((100vh - 80px));
   flex: 0 1 auto;
-  min-height: 0px;
-  overflow: hidden;
 }
 
 .part * img,
@@ -440,5 +448,5 @@ p {
 }
 
 br {
-  margin: calc(4px + 12 * ((100vw - 320px) / (1200)));
+  margin: calc(4px + 12 * ((100vh - 320px) / (1200)));
 }
