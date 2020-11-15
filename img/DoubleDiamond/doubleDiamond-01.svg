@@ -1,17 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1620" height="1000" viewBox="0 0 1620 1000">
   <defs>
     <style>
-      .a, .b {
-        fill: none;
+      .view-box,
+      .double-diamond {
+        stroke-width: 2px;
         stroke: #000;
-        stroke-miterlimit: 10;
-      stroke-width:2px;
       }
-      .b {
-      fill: #8a8a8a;
+
+      .view-box {
+        fill: none;
       }
+      
+      .double-diamond{
+      fill:#fff;
+      }
+
+      .double-diamond.grey {
+        fill: #8F8F8F;
+      }
+      
+      .double-diamond.black {
+        fill: #000;
+      }
+      
+      .double-diamond.blue {
+        fill: #6F72E5;
+      }
+      
+      .view-box.invert{
+      stroke: #fff
+      }
+
     </style>
   </defs>
-    <path vector-effect="non-scaling-stroke" class="b" d="M1,499,385.7,975.1a25,25,0,0,0,38.8.1L790.7,528.6a24.9,24.9,0,0,1,38.6,0l366.2,446.7a25.1,25.1,0,0,0,38.8-.1l371.9-459.5a24.7,24.7,0,0,0,0-31.4L1233.3,24.8a24.9,24.9,0,0,0-38.7,0L829.3,471.4a25,25,0,0,1-38.7,0L424.5,24.7a25.1,25.1,0,0,0-38.8.1L1,500"/>
-  <rect vector-effect="non-scaling-stroke" class="a" x="1" y="1" width="78" height="998"/>
+  <polyline vector-effect="non-scaling-stroke" class="double-diamond grey" points="1 498 405 998 810 505 1215 998 1618 500 1215 1 810 495 405 1 1 500" />
+  <rect vector-effect="non-scaling-stroke" class="view-box" x="2" y="2" width="76" height="996" />
 </svg>
