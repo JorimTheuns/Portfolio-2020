@@ -52,6 +52,22 @@ section::before {
   transition: transform ease 2s;
 }
 
+a::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 18%;
+  left:0;
+  transform: scale(0,1);
+  transform-origin: left;
+  transition: transform ease .4s;
+}
+
+a:hover::after, a:focus::after{
+  transform: scale(1,1);
+}
+
 /*COLORS*/
 
 section {
@@ -60,6 +76,11 @@ section {
   color: #F0D3D5;
   border-style: hidden;
   border-color: #F0D3D5;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
 }
 
 section::before {
@@ -79,6 +100,11 @@ section a, section a *{
   color: #A64B5B
 }
 
+section a::after{
+  background: #A64B5B;
+}
+
+
 /*GREY SECTION*/
 
 section.grey {
@@ -88,8 +114,7 @@ section.grey {
   border-color: #2B2B27;
 }
 
-section * {
-  border-style: hidden;
+section.grey * {
   border-color: #2B2B27;
 }
 
@@ -99,6 +124,10 @@ section.grey span.highlight {
 
 section.grey a, section.grey a * {
   color: #F27EB4;
+}
+
+section.grey a::after{
+  background: #F27EB4;
 }
 
 /*GREY SECTION ENDS*/
@@ -113,8 +142,12 @@ section.blue span.highlight {
   color: #AEDFF2;
 }
 
-section.blue a {
+section.blue a, section.blue a * {
   color: #E3B68C;
+}
+
+section.blue a::after{
+  background: #E3B68C;
 }
 
 section.invert {
@@ -265,16 +298,16 @@ svg * {
   font-size: 32px;
   line-height: 32px;
   padding: 16px;
-  padding-left: 0;
+  padding-left: 64px;
   display: inline-block;
   position: relative;
-  left: 64px;
+  left: 0;
   width: calc(100vw - 64px);
 }
 
 @media screen and (max-width: 596px) {
-  .section-title.shift {
-    transform: translateX(-48px);
+  .section-title h1 {
+    padding-left: 16px;
   }
 }
 
@@ -649,7 +682,7 @@ span.highlight{
     transform: translateY(100%);
   }
 
-  40% {
+  20% {
     -moz-transform: translateY(0);
     /* Firefox bug fix */
     -webkit-transform: translateY(0);
@@ -657,7 +690,7 @@ span.highlight{
     transform: translateY(0);
   }
 
-  60% {
+  80% {
     -moz-transform: translateY(0);
     /* Firefox bug fix */
     -webkit-transform: translateY(0);
@@ -683,7 +716,7 @@ span.highlight{
     transform: translateX(100%);
   }
 
-  40% {
+  20% {
     -moz-transform: translateX(0);
     /* Firefox bug fix */
     -webkit-transform: translateX(0);
@@ -691,7 +724,7 @@ span.highlight{
     transform: translateX(0);
   }
 
-  60% {
+  80% {
     -moz-transform: translateX(0);
     /* Firefox bug fix */
     -webkit-transform: translateX(0);
