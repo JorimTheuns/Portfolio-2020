@@ -1,10 +1,10 @@
-var waypoints = $('.part').waypoint(function (direction) {
+/*var waypoints = $('.part').waypoint(function (direction) {
   //console.log(this.element.innerHTML);
   //console.log($(this.element));
   //$(this.element).children().addClass('active');
 }, {
   offset: '100%'
-});
+});*/
 
 let observer;
 
@@ -40,15 +40,15 @@ let mainObserver;
 let mainOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: .1
+  threshold: .5
 }
 
 let mainCallback = (entries, mainObserver) => {
   entries.forEach(entry => {
     if (entry.isIntersecting == false) {
-      $(".section-content").animate({
+      /*$(".section-content").animate({
         scrollLeft: last_known_scroll_position
-      }, "slow");
+      }, "slow");*/
       $(entry.target).parent().removeClass("active");
     } else {
       $(entry.target).parent().addClass("active");
@@ -58,10 +58,14 @@ let mainCallback = (entries, mainObserver) => {
 
 mainObserver = new IntersectionObserver(mainCallback, mainOptions);
 
+
+
 let mainTargets = document.querySelectorAll(".section-content");
+
 
 mainTargets.forEach(mainTarget => {
   mainObserver.observe(mainTarget);
+  /*
   mainTarget.addEventListener('scroll', function (e) {
     last_known_scroll_position = mainTarget.scrollY;
     if (!ticking) {
@@ -72,8 +76,11 @@ mainTargets.forEach(mainTarget => {
       ticking = true;
     }
   });
+  */
 });
 
+
+/*
 let last_known_scroll_position = 0;
 let ticking = false;
 
@@ -85,6 +92,8 @@ function doSomething(target, pos) {
     scrollTop: $(target).parent().offset().top
   }, "fast");
 }
+
+*/
 
 /*let mainObserver;
 

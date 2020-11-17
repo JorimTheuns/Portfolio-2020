@@ -24,7 +24,6 @@
 .grt h2 {
   font-size: 19px;
   line-height: 31px;
-  margin-top: 32px;
 
   font-size: calc(19px + 9.5 * ((100vh - 600px) / 600));
   line-height: calc(31px + 15.5 * ((100vh - 600px) / 600));
@@ -33,7 +32,6 @@
 .grt h3 {
   font-size: 15px;
   line-height: 25px;
-  margin-top: 20px;
 
   font-size: calc(15px + 7.5 * ((100vh - 600px) / 600));
   line-height: calc(25px + 12.5 * ((100vh - 600px) / 600));
