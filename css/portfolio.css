@@ -68,6 +68,12 @@ a:hover::after, a:focus::after{
   transform: scale(1,1);
 }
 
+section .section-content .part .full.no-border * {
+  border-style: hidden;
+  background: none;
+  max-width: 200vw;
+}
+
 /*COLORS*/
 
 section {
