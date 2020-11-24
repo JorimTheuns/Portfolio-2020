@@ -5,6 +5,13 @@
   line-height: calc(20px + 10 * ((100vh - 600px) / 600));
 }
 
+.top-pad{
+  padding-top: calc((12px + 6 * ((100vh - 600px) / 600)) / 2);
+}
+.bottom-pad{
+  padding-bottom: calc((12px + 6 * ((100vh - 600px) / 600)) / 2);
+}
+
 .grt h1 {
   font-size: 25px;
   line-height: 39px;

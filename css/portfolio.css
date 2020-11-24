@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   transition: transform ease .4s;
+  transition: border-color ease .4s;
 }
 
 html {
@@ -52,20 +53,46 @@ section::before {
   transition: transform ease 2s;
 }
 
-a::after{
+a::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 2px;
   bottom: 18%;
-  left:0;
-  transform: scale(0,1);
+  left: 0;
+  transform: scale(0, 1);
   transform-origin: left;
   transition: transform ease .4s;
 }
 
-a:hover::after, a:focus::after{
-  transform: scale(1,1);
+
+a:hover::after,
+a:focus::after {
+  transform: scale(1, 1);
+}
+
+a.image {
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  display: inline-block;
+}
+
+a.image img {
+  height: 100%;
+  width: 100%;
+  object-position: top left;
+  object-fit: cover;
+}
+
+img{
+  object-fit: cover;
+}
+
+a.image::after{
+  bottom:0;
+  height:100%;
+  opacity: .2;
 }
 
 section .section-content .part .full.no-border * {
@@ -84,7 +111,7 @@ section {
   border-color: #F0D3D5;
 }
 
-a{
+a {
   text-decoration: none;
   display: inline-block;
 }
@@ -102,11 +129,12 @@ section span.highlight {
   color: #C7A192;
 }
 
-section a, section a *{
+section a,
+section a * {
   color: #A64B5B
 }
 
-section a::after{
+section a::after {
   background: #A64B5B;
 }
 
@@ -128,11 +156,12 @@ section.grey span.highlight {
   color: #000;
 }
 
-section.grey a, section.grey a * {
+section.grey a,
+section.grey a * {
   color: #F27EB4;
 }
 
-section.grey a::after{
+section.grey a::after {
   background: #F27EB4;
 }
 
@@ -148,11 +177,12 @@ section.blue span.highlight {
   color: #AEDFF2;
 }
 
-section.blue a, section.blue a * {
+section.blue a,
+section.blue a * {
   color: #E3B68C;
 }
 
-section.blue a::after{
+section.blue a::after {
   background: #E3B68C;
 }
 
@@ -552,6 +582,19 @@ svg * {
   overflow: hidden;
 }
 
+@media screen and (min-width: 596px) {
+  .part * iframe {
+    min-width: 500px;
+  }
+}
+
+a img {
+  min-height: 0px;
+  width: auto;
+  max-width: calc(100vw - 96px);
+  cursor: pointer;
+}
+
 .part .top * {
   object-position: 0 100%;
   max-height: calc((100vh - 80px) / 2);
@@ -622,6 +665,25 @@ iframe {
   height: 100%;
   border-style: hidden;
   width: 100%;
+}
+
+iframe.p5 {
+  overflow: hidden;
+  width: 100vw;
+}
+
+.fixed-aspect{
+  position: relative;
+  width: 100vh;
+  height: 0;
+  padding-bottom: 66.6%;
+}
+
+.fixed-aspect iframe.p5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; top: 0;
 }
 
 .button {
