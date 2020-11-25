@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
   transition: transform ease .4s;
-  transition: border-color ease .4s;
 }
 
 html {

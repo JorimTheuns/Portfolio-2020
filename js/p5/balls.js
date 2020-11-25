@@ -62,7 +62,7 @@ function setup() {
   /*oldMouseX = mouseX;
   oldMouseY = mouseY;*/
   cells[ceil(cellsWide/2)-1][ceil(cellsHigh/2)-1].clicked();
-  textSize((6 + 12 * ((windowHeight - 600) / 600)));
+  textSize(12);
 }
 
 function draw() {
@@ -120,7 +120,7 @@ function draw() {
   fill(average());
   rect(0, 0, sizer, sizer*6);
   fill(invert(average()));
-  text("Real \n Average", 0, 0);
+  text("Real \n Average \n n=" + number, 0, 0);
   pop();
 
   push();
