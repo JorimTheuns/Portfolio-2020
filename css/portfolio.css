@@ -85,7 +85,8 @@ a.image img {
 }
 
 img{
-  object-fit: cover;
+  object-fit: scale-down;
+  object-position: center left;
 }
 
 a.image::after{
@@ -569,12 +570,18 @@ svg * {
   object-fit: scale-down;
 }*/
 
-.part * img,
 .part * object,
 .part * svg,
 .part * video,
 .part * iframe {
   background: #000;
+  min-height: 0px;
+  width: auto;
+  max-width: calc(100vw - 96px);
+  overflow: hidden;
+}
+
+.part * img{
   min-height: 0px;
   width: auto;
   max-width: calc(100vw - 96px);
