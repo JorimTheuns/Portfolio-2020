@@ -3,7 +3,7 @@ let iframeObserver;
 let iframeOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: .2
+  threshold: .9
 }
 
 let iframeCallback = (entries, observer) => {

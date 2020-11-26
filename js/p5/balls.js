@@ -1,4 +1,6 @@
-let squareRootCells = 30;
+p5.disableFriendlyErrors = true;
+
+let squareRootCells;
 let cellsWide;
 let cellsHigh;
 let total;
@@ -17,15 +19,20 @@ let infSample;
 let sample1;
 let sample2;
 let sample3;
+let sizer;
+let sizerHeight;
 
 function setup() {
   //Declarations
   createCanvas(windowWidth, windowHeight);
+  sizer = width/6;
+  sizerHeight = 50;
+  squareRootCells = 40;
   //you can change these paramenters, Smaller cellsize increases complexity non-linearly
-  cellSize = (sqrt(width*height))/50;
-  //console.log(width,height);
-  cellsWide = ceil((width-(height/3))/cellSize);
-  cellsHigh = ceil(height/cellSize);
+  cellSize = (sqrt(width*(height-(sizerHeight*1.5))))/squareRootCells;
+  //console.log(cellSize);
+  cellsWide = ceil((width)/cellSize);
+  cellsHigh = ceil((height-(sizerHeight*1.5))/cellSize);
   colorMode(RGB,1);
   //background color, dont change last value
   bkgcol = color(1,1,1,0.05);
@@ -63,6 +70,9 @@ function setup() {
   oldMouseY = mouseY;*/
   cells[ceil(cellsWide/2)-1][ceil(cellsHigh/2)-1].clicked();
   textSize(12);
+  if (width < 600){
+    textSize(8)
+  }
 }
 
 function draw() {
@@ -71,6 +81,7 @@ function draw() {
   let number = 0;
   let mousePosX = mouseX;
   let mousePosY = mouseY;
+
   /*if (mousePosX == oldMouseX){
     mousePosX = width/2;
   }
@@ -99,8 +110,15 @@ function draw() {
   
   x = constrain(x, 0, cellsWide-1);
   y = constrain(y, 0, cellsHigh-1);
+  
+  
   if (mousePosX != oldMouseX && mousePosY != oldMouseY){
    cells[x][y].clicked();
+    push();
+  fill(0,0,0,0.5);
+  noStroke()
+  ellipse((x*cellSize)+cellSize/2,(y*cellSize)+cellSize/2,cellSize,cellSize);
+  pop();
     //console.log("clicked");
   } else if (number == 0){
     console.log(number);
@@ -112,57 +130,56 @@ function draw() {
   oldMouseX = mouseX;
   oldMouseY = mouseY;
   sample3 = ceil(infSample/(1+((infSample-1)/number)));
-  let sizer = height/6;
   //real average
   //translate(-20, 0);
   push();
-  translate(width-(sizer*1.5), height/2);
+  translate(width/2, height-(sizerHeight*1.25));
   fill(average());
-  rect(0, 0, sizer, sizer*6);
+  rect(0, 0, sizer*6, sizerHeight/2);
   fill(invert(average()));
-  text("Real \n Average \n n=" + number, 0, 0);
+  text("Real Average n=" + number, 0, 0);
   pop();
 
   push();
-  translate(width-(sizer*0.5), height/2);
+  translate(width/2, height-(sizerHeight*0.5));
   push();
-  translate(0, -sizer*2.5);
+  translate(-sizer*2.5, 0);
   fill(dumbBin());
-  rect(0, 0, sizer, sizer);
+  rect(0, 0, sizer, sizerHeight);
   fill(invert(dumbBin()));
   text("RGB Parties \n Winner takes all", 0, 0);
   pop();
 
   push();
-  translate(0, -sizer*1.5);
+  translate(-sizer*1.5, 0);
   fill(CMYKbin());
-  rect(0, 0, sizer, sizer);
+  rect(0, 0, sizer, sizerHeight);
   fill(invert(CMYKbin()));
   text("CMY Parties \n Winner takes all", 0, 0);
   pop();
 
   push();
-  translate(0, -sizer*0.5);
+  translate(-sizer*0.5, 0);
   fill(bin());
-  rect(0, 0, sizer, sizer);
+  rect(0, 0, sizer, sizerHeight);
   fill(invert(bin()));
   text("RGB Parties \n Proportional \n Representation", 0, 0);
   pop();
 
   push();
-  translate(0, sizer*1.5);
+  translate(sizer*1.5, 0);
   fill(sortition(sample3, number));
-  rect(0, -(sizer), sizer, sizer);
+  rect(-(sizer), 0, sizer, sizerHeight);
   fill(invert(sortition(sample3, number)));
-  text("Sortition \n n=" + sample3, 0, -sizer);
+  text("Sortition \n n=" + sample3, -sizer, 0);
   fill(sortition(sample2, number));
-  rect(0, 0, sizer, sizer);
+  rect(0, 0, sizer, sizerHeight);
   fill(invert(sortition(sample2, number)));
-  text("Jury \n Selection \n n=" + sample2, 0, 0);
+  text("Jury \n n=" + sample2, 0, 0);
   fill(sortition(sample1, number));
-  rect(0, sizer, sizer, sizer);
+  rect(sizer, 0, sizer, sizerHeight);
   fill(invert(sortition(sample1, number)));
-  text("Lottery \n n=" + sample1, 0, sizer);
+  text("Lottery \n n=" + sample1, sizer, 0);
   pop();
   pop();
 
@@ -171,9 +188,11 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  cellSize = (sqrt(width*height))/50;
-  cellsWide = ceil(width/cellSize);
-  cellsHigh = ceil(height/cellSize);
+    cellSize = (sqrt(width*(height-(sizerHeight*2))))/squareRootCells;
+  //console.log(cellSize);
+  cellsWide = ceil((width)/cellSize);
+  cellsHigh = ceil((height-(sizerHeight*1.5))/cellSize);
+  sizer = width/6;
     total = cellsWide*cellsHigh;
   for (let i = 0; i< cellsWide; i++) {
     cells[i] = [];
@@ -187,6 +206,10 @@ function windowResized() {
     for (let j = 0; j< cellsHigh; j++) {
       cells[i][j].init();
     }
+  }
+  textSize(12);
+  if (width < 600){
+    textSize(8)
   }
 }
 
