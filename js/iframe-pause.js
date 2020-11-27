@@ -6,7 +6,7 @@ let iframeOptions = {
   threshold: .9
 }
 
-let iframeCallback = (entries, observer) => {
+let iframeCallback = (entries, iframeObserver) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       console.log(entry);
