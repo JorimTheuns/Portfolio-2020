@@ -25,10 +25,10 @@ function setup() {
 }
 
 function draw() {
-  background(0,0.01);
+  background(0,0.03);
   rectMode(CENTER);
     textAlign(CENTER, CENTER);
-  textSize(32);
+  textSize(12);
   push();
   fill(255);
   noStroke();
