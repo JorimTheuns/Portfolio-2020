@@ -5,15 +5,15 @@
 let r = 1;
 let aout = 0.5;
 let aout1 = 0.5;
-//let aout2 = 0.5;
+let aout2 = 0.5;
 
 let bout = 0.5;
 let bout1 = 0.5;
-//let bout2 = 0.5;
+let bout2 = 0.5;
 
 let cout = 0.5;
 let cout1 = 0.5;
-//let cout2 = 0.5;
+let cout2 = 0.5;
 
 //PFont font;
 
@@ -28,11 +28,10 @@ function draw() {
   background(0,0.03);
   rectMode(CENTER);
     textAlign(CENTER, CENTER);
-  textSize(12);
   push();
   fill(255);
   noStroke();
-  textSize(24);
+  textSize(12);
   text("Perlin noise", width/6, height-50);
   text("Logistic function", 2*width/4, height-50);
   text("Randomness", (width/6)*5, height-50);
