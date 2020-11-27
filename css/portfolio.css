@@ -227,7 +227,7 @@ section.grey {
 section .part .full video,
 section .part .full:not(.key-moment) img,
 section .part .full iframe {
-  border-style: solid;
+  /*border-style: solid;*/
 }
 
 .part .key-moment {
