@@ -29,9 +29,11 @@ function draw() {
   rectMode(CENTER);
     textAlign(CENTER, CENTER);
   push();
-  fill(255);
   noStroke();
   textSize(12);
+  fill(0);
+  rect(width/2,height-50,width,100);
+  fill(255);
   text("Perlin noise", width/6, height-50);
   text("Logistic function", 2*width/4, height-50);
   text("Randomness", (width/6)*5, height-50);
