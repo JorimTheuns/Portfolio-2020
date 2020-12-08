@@ -6,14 +6,15 @@
   offset: '100%'
 });*/
 
-window.onresize =  function(){
+function iosBug(){
   let sections = document.querySelectorAll("section");
   sections.forEach(section =>{
     section.height = window.innerHeight;
   })
 }
 
-window.onresize();
+window.addEventListener('resize', iosBug);
+iosBug();
 
 let observer;
 
