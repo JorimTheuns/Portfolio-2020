@@ -24,17 +24,18 @@ body {
 
 #scroll-parent {
   height: 100vh;
+  height: -webkit-fill-available;
   overflow-x: hidden;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch;
+  /*scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;*/
 }
 
 section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: 100vh;
+  height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -43,7 +44,7 @@ section {
 section::before {
   content: " ";
   position: absolute;
-  top: calc((64px + ((100vh - 80px) / 2)) - 1px);
+  top: calc((64px + ((100% - 80px) / 2)) - 1px);
   width: 100%;
   height: 0;
   border-bottom: solid 2px;
@@ -361,6 +362,7 @@ svg * {
 
 .section-content {
   max-height: 100vh;
+  height: -webkit-fill-available;
   width: 100%;
   text-align: left;
   position: relative;
@@ -375,8 +377,8 @@ svg * {
   overflow-y: hidden;
   padding-left: 64px;
   padding-right: 64p;
-  padding-top: 64px;
   padding-bottom: 16px;
+  padding-top: 64px;
 }
 
 @media screen and (max-width: 596px) {
@@ -401,7 +403,9 @@ svg * {
 
 .part {
   max-width: 100vw;
-  min-width: max-content;
+  min-width: min-content;
+  min-height:0;
+  height: 100%;
   /*scroll-snap-align: start;*/
   /*overflow-y: hidden;
   overflow-x: hidden;*/
@@ -435,7 +439,7 @@ svg * {
 
 .part.highlight video {
   border-radius: 16px;
-  max-height: calc(100vh - 112px);
+  max-height: calc(100% - 112px);
 }
 
 .grey .part.active.highlight {
@@ -604,18 +608,18 @@ a img {
 
 .part .top * {
   object-position: 0 100%;
-  max-height: calc((100vh - 80px) / 2);
+  max-height: calc((100% - 80px) / 2);
   flex: 0 1 auto;
 }
 
 .part .bottom * {
   object-position: 0 0;
-  max-height: calc((100vh - 80px) / 2);
+  max-height: calc((100% - 80px) / 2);
   flex: 0 1 auto;
 }
 
 .part .full * {
-  max-height: calc((100vh - 80px));
+  max-height: calc((100% - 80px));
   flex: 0 1 auto;
 }
 
@@ -662,7 +666,7 @@ video::before {
 .part video {
   object-fit: contain;
   object-position: center;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100% - 80px);
   width: auto;
   max-width: calc(100vw - 32px);
   flex-basis: 0;
@@ -681,7 +685,7 @@ iframe.p5 {
 
 .fixed-aspect{
   position: relative;
-  width: 100vh;
+  width: 100%;
   height: 0;
   padding-bottom: 66.6%;
 }
@@ -829,7 +833,7 @@ p {
 /*#### break size ####*/
 
 br {
-  margin: calc(4px + 12 * ((100vh - 320px) / (1200)));
+  margin: calc(4px + 12 * ((100% - 320px) / (1200)));
 }
 
 /*#### hanging quotes ####*/
