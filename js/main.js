@@ -13,8 +13,8 @@ function iosBug(){
   })
 }
 
-window.addEventListener('resize', iosBug);
-iosBug();
+//window.addEventListener('resize', iosBug);
+//iosBug();
 
 let observer;
 
