@@ -24,7 +24,7 @@ body {
 
 #scroll-parent {
   height: 100vh;
-  height: -webkit-fill-available;
+  /*height: -webkit-fill-available;*/
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
