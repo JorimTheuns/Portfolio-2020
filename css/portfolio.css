@@ -495,7 +495,7 @@ svg * {
   justify-content: flex-end;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc((100vh - 80px) / 2);
+  height: calc((100% - 80px) / 2);
   width: auto;
   padding: 0 0 16px 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
@@ -525,7 +525,7 @@ svg * {
   justify-content: flex-start;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc((100vh - 80px) / 2);
+  height: calc((100% - 80px) / 2);
   width: auto;
   padding: 16px 0 0 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
@@ -540,7 +540,7 @@ svg * {
   justify-content: center;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc(100vh - 80px);
+  height: calc(100% - 80px);
   width: auto;
   padding: 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
