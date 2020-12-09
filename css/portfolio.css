@@ -36,9 +36,10 @@ section {
   scroll-snap-stop: always;
   height: 100vh;
   height: -webkit-fill-available;
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
   position: relative;
+  /*overflow-x: scroll;*/
 }
 
 section::before {
@@ -363,10 +364,11 @@ svg * {
 .section-content {
   max-height: 100vh;
   width: 100%;
+  /*min-width: max-content;*/
   text-align: left;
   position: relative;
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr;
   /*grid-auto-columns: calc(320px + 500 * ((100vw - 320px) / (1200)));
   grid-auto-columns: minmax(min-content, 100vw);*/
   grid-auto-flow: column;
@@ -412,6 +414,7 @@ svg * {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  grid-row:  span 2;
 }
 
 /*
@@ -498,7 +501,7 @@ svg * {
   justify-content: flex-end;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc((100% - 80px) / 2);
+  height: calc((100vh - 80px) / 2);
   width: auto;
   padding: 0 0 16px 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
@@ -528,7 +531,7 @@ svg * {
   justify-content: flex-start;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc((100% - 80px) / 2);
+  height: calc((100vh - 80px) / 2);
   width: auto;
   padding: 16px 0 0 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
@@ -543,7 +546,7 @@ svg * {
   justify-content: center;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc(100% - 80px);
+  height: calc(100vh - 80px);
   width: auto;
   padding: 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
@@ -608,18 +611,18 @@ a img {
 
 .part .top * {
   object-position: 0 100%;
-  max-height: calc((100% - 80px) / 2);
+  max-height: calc((100vh - 80px) / 2);
   flex: 0 1 auto;
 }
 
 .part .bottom * {
   object-position: 0 0;
-  max-height: calc((100% - 80px) / 2);
+  max-height: calc((100vh - 80px) / 2);
   flex: 0 1 auto;
 }
 
 .part .full * {
-  max-height: calc((100% - 80px));
+  max-height: calc((100vh - 80px));
   flex: 0 1 auto;
 }
 
@@ -666,7 +669,7 @@ video::before {
 .part video {
   object-fit: contain;
   object-position: center;
-  max-height: calc(100% - 80px);
+  max-height: calc(100vh - 80px);
   width: auto;
   max-width: calc(100vw - 32px);
   flex-basis: 0;
@@ -833,7 +836,7 @@ p {
 /*#### break size ####*/
 
 br {
-  margin: calc(4px + 12 * ((100% - 320px) / (1200)));
+  margin: calc(4px + 12 * ((100vh - 320px) / (1200)));
 }
 
 /*#### hanging quotes ####*/
