@@ -27,8 +27,8 @@ body {
   height: -webkit-fill-available;
   overflow-x: hidden;
   overflow-y: scroll;
-  /*scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch;*/
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 section {
@@ -362,7 +362,6 @@ svg * {
 
 .section-content {
   max-height: 100vh;
-  height: -webkit-fill-available;
   width: 100%;
   text-align: left;
   position: relative;
@@ -404,6 +403,7 @@ svg * {
 .part {
   max-width: 100vw;
   min-width: min-content;
+  width: max-content;
   min-height:0;
   height: 100%;
   /*scroll-snap-align: start;*/
