@@ -407,6 +407,7 @@ svg * {
   min-width: min-content;
   width: max-content;
   min-height:0;
+  max-height: 100%;
   height: 100%;
   /*scroll-snap-align: start;*/
   /*overflow-y: hidden;
@@ -414,7 +415,7 @@ svg * {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  grid-row:  span 2;
+  grid-row: span 1;
 }
 
 /*
@@ -484,9 +485,11 @@ svg * {
 .part {
   /*transform: rotateX(90deg) translate(100px);
   opacity: 0;*/
+  transform: rotateX(90deg) translate(16px);
+  opacity: 0;
 }
 
-.part.active {
+.section-content .part.active {
   transform: rotateX(0) translate(0);
   opacity: 1;
 }
@@ -495,69 +498,56 @@ svg * {
   align-items: flex-start;
 }
 
-.part .top {
+.part.top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  height: calc((100vh - 80px) / 2);
   width: auto;
-  padding: 0 0 16px 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   transform-origin: bottom;
-  transform: rotateX(90deg) translate(16px);
-  opacity: 0;
+  grid-row: 1;
 }
 
-.part .middle {
+.part * {
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+}
+
+.part.middle {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  height: min-content;
   width: auto;
-  padding: 16px 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   transform-origin: center;
-  transform: rotateX(90deg) translate(16px);
-  opacity: 0;
 }
 
-.part .bottom {
+.part.bottom {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  height: calc((100vh - 80px) / 2);
   width: auto;
-  padding: 16px 0 0 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   transform-origin: top;
-  transform: rotateX(90deg) translate(16px);
-  opacity: 0;
+  grid-row: 2;
 }
 
-.part .full {
+.part.full {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc(100vh - 80px);
   width: auto;
   padding: 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   padding-left: 0;
   transform-origin: center;
-  transform: rotateX(90deg) translate(16px);
-  opacity: 0;
+  grid-row: span 2;
 }
 
 
-.part.active * {
+.part.active {
   transform: rotateX(0) translate(0);
   opacity: 1;
 }

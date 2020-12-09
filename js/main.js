@@ -59,9 +59,9 @@ let mainCallback = (entries, mainObserver) => {
       /*$(".section-content").animate({
         scrollLeft: last_known_scroll_position
       }, "slow");*/
-      $(entry.target).parent().removeClass("active");
+      $(entry.target).removeClass("active");
     } else {
-      $(entry.target).parent().addClass("active");
+      $(entry.target).addClass("active");
     }
   });
 };
