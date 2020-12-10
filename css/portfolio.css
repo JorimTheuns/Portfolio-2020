@@ -45,7 +45,7 @@ section {
 section::before {
   content: " ";
   position: absolute;
-  top: calc((64px + ((100% - 80px) / 2)) - 1px);
+  top: calc((64px + ((100vh - 128px) / 2)) - 1px);
   width: 100%;
   height: 0;
   border-bottom: solid 2px;
@@ -378,7 +378,7 @@ svg * {
   overflow-y: hidden;
   padding-left: 64px;
   padding-right: 64p;
-  padding-bottom: 16px;
+  padding-bottom: 64px;
   padding-top: 64px;
 }
 
@@ -501,7 +501,7 @@ svg * {
   justify-content: flex-end;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc((100vh - 80px) / 2);
+  height: calc((100vh - 128px) / 2);
   width: auto;
   padding: 0 0 16px 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
@@ -531,7 +531,7 @@ svg * {
   justify-content: flex-start;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc((100vh - 80px) / 2);
+  height: calc((100vh - 128px) / 2);
   width: auto;
   padding: 16px 0 0 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
@@ -546,7 +546,7 @@ svg * {
   justify-content: center;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 128px);
   width: auto;
   padding: 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
@@ -611,18 +611,18 @@ a img {
 
 .part .top * {
   object-position: 0 100%;
-  max-height: calc((100vh - 80px) / 2);
+  max-height: calc((100vh - 128px) / 2);
   flex: 0 1 auto;
 }
 
 .part .bottom * {
   object-position: 0 0;
-  max-height: calc((100vh - 80px) / 2);
+  max-height: calc((100vh - 128px) / 2);
   flex: 0 1 auto;
 }
 
 .part .full * {
-  max-height: calc((100vh - 80px));
+  max-height: calc((100vh - 128px));
   flex: 0 1 auto;
 }
 
@@ -669,7 +669,7 @@ video::before {
 .part video {
   object-fit: contain;
   object-position: center;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 128px);
   width: auto;
   max-width: calc(100vw - 32px);
   flex-basis: 0;
