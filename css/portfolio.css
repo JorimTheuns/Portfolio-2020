@@ -364,11 +364,11 @@ svg * {
 .section-content {
   max-height: 100vh;
   width: 100%;
-  /*min-width: max-content;*/
+  min-width: max-content
   text-align: left;
   position: relative;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   /*grid-auto-columns: calc(320px + 500 * ((100vw - 320px) / (1200)));
   grid-auto-columns: minmax(min-content, 100vw);*/
   grid-auto-flow: column;
@@ -414,7 +414,6 @@ svg * {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  grid-row:  span 2;
 }
 
 /*
