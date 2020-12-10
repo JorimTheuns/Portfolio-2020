@@ -364,7 +364,7 @@ svg * {
 .section-content {
   max-height: 100vh;
   width: 100%;
-  min-width: max-content
+  min-width: max-content;
   text-align: left;
   position: relative;
   display: grid;
@@ -373,11 +373,9 @@ svg * {
   grid-auto-columns: minmax(min-content, 100vw);*/
   grid-auto-flow: column;
   grid-gap: calc(32px + 32 * ((100vw - 320px) / (1200)));
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
   overflow-y: hidden;
   padding-left: 64px;
-  padding-right: 64p;
+  padding-right: 64px;
   padding-bottom: 64px;
   padding-top: 64px;
 }
@@ -402,8 +400,14 @@ svg * {
   /* Firefox */
 }
 
+.section-carousel{
+    -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
 .part {
-  max-width: 100vw;
+  /*max-width: 100vw;*/
   min-width: min-content;
   width: max-content;
   min-height:0;

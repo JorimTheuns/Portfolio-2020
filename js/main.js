@@ -70,7 +70,7 @@ mainObserver = new IntersectionObserver(mainCallback, mainOptions);
 
 
 
-let mainTargets = document.querySelectorAll(".section-content");
+let mainTargets = document.querySelectorAll(".section-carousel");
 
 
 mainTargets.forEach(mainTarget => {
