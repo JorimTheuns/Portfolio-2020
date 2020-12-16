@@ -33,6 +33,7 @@ let callback = (entries, observer) => {
       }
     } else {
       $(entry.target).addClass("active");
+      $(".full.no-border").parent().addClass("active");
     }
   })
 };

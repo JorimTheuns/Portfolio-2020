@@ -11,7 +11,7 @@
 }
 
 html {
-  font-family: "Aesthet Nova", sans-serif;
+  font-family: "Aesthet Nova", serif;
   -webkit-text-size-adjust: 100%;
   /* 2 */
   font-weight: normal;
@@ -85,21 +85,21 @@ a.image img {
   object-fit: cover;
 }
 
-img{
+img {
   object-fit: scale-down;
   object-position: center left;
 }
 
-a.image::after{
-  bottom:0;
-  height:100%;
+a.image::after {
+  bottom: 0;
+  height: 100%;
   opacity: .2;
 }
 
 section .section-content .part .full.no-border * {
   border-style: hidden;
   background: none;
-  max-width: 200vw;
+  max-width: 500vw;
 }
 
 /*COLORS*/
@@ -235,6 +235,7 @@ section .part .full iframe {
   max-width: 1000px;
 }
 
+
 .part .key-moment svg {
   stroke-width: 2px;
   height: auto;
@@ -342,11 +343,20 @@ svg * {
   width: calc(100vw - 64px);
 }
 
+.part.peek {
+  max-width: calc(100vw - (64px + 150px));
+}
+
 @media screen and (max-width: 596px) {
   .section-title h1 {
     padding-left: 16px;
   }
+
+  .part.peek {
+    max-width: calc(100vw - (16px + 150px));
+  }
 }
+
 
 .section-title svg {
   display: inline-block;
@@ -398,8 +408,8 @@ svg * {
   /* Firefox */
 }
 
-.section-carousel{
-    -webkit-overflow-scrolling: touch;
+.section-carousel {
+  -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
   overflow-y: hidden;
 }
@@ -408,7 +418,7 @@ svg * {
   /*max-width: 100vw;*/
   min-width: min-content;
   width: max-content;
-  min-height:0;
+  min-height: 0;
   height: 100%;
   /*scroll-snap-align: start;*/
   /*overflow-y: hidden;
@@ -590,7 +600,7 @@ svg * {
   overflow: hidden;
 }
 
-.part * img{
+.part * img {
   min-height: 0px;
   width: auto;
   max-width: calc(100vw - 96px);
@@ -687,7 +697,7 @@ iframe.p5 {
   width: 100vw;
 }
 
-.fixed-aspect{
+.fixed-aspect {
   position: relative;
   width: 100%;
   height: 0;
@@ -698,7 +708,8 @@ iframe.p5 {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0; top: 0;
+  left: 0;
+  top: 0;
 }
 
 .button {
@@ -770,7 +781,7 @@ img.circle {
     /* Firefox bug fix */
     transform: translateY(-5px);
   }
-  
+
   24% {
     -moz-transform: translateY(0);
     /* Firefox bug fix */
@@ -828,6 +839,7 @@ img.circle {
     /* Firefox bug fix */
     transform: translateX(-1px);
   }
+
   30% {
     -moz-transform: translateX(0);
     /* Firefox bug fix */
@@ -857,6 +869,6 @@ br {
 
 /*#### hanging quotes ####*/
 
-*.quote{
+*.quote {
   text-indent: -0.39em;
 }
