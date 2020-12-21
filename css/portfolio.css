@@ -345,7 +345,18 @@ svg * {
 
 .part.peek {
   max-width: calc(100vw - (64px + 150px));
+  min-width: 300px;
 }
+
+
+.part.section-start{
+  margin-left: calc(100vw - 500px);
+  padding-left: 64px;
+  padding-right: 64px;
+  border-left: solid 1px;
+}
+
+
 
 @media screen and (max-width: 596px) {
   .section-title h1 {
@@ -354,6 +365,11 @@ svg * {
 
   .part.peek {
     max-width: calc(100vw - (16px + 150px));
+  }
+
+  .part.section-start {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -383,7 +399,7 @@ svg * {
   grid-gap: calc(32px + 32 * ((100vw - 320px) / (1200)));
   overflow-y: hidden;
   padding-left: 64px;
-  padding-right: 64px;
+  padding-right: 0;
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -601,7 +617,7 @@ svg * {
   overflow: hidden;
 }
 
-.part * iframe{
+.part * iframe {
   background: #000;
 }
 
@@ -653,6 +669,10 @@ a img {
 @media screen and (max-width: 596px) {
   .part * * {
     max-width: calc(100vw - 96px);
+  }
+
+  .part .contents {
+    max-width: calc(100vw - 64px);
   }
 }
 

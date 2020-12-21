@@ -31,19 +31,19 @@ let helixOffset;
 let strokeW;
 
 function setup() {
-  sqrtN = 10;
+  sqrtN = 20;
   totalNodes  = sqrtN*sqrtN;
   N = ceil(sqrt(totalNodes));
-  pts = 25; 
+  pts = N; 
   angle = 0.0;
   count = 0;
 
 // lathe segments
-  segments = 1000/pts;
+  segments = totalNodes/pts;
   latheAngle = 0;
   latheRadius = 500;
   radius = (latheRadius/(segments/pts))/2;
-  highlight_col= color("#DFE3E3");
+  highlight_col= color("#F27EB4");
   other_col= color("#3A3A37");
   background_col= color("#ffffff");
   cube_col= color("#F1F3F5");
@@ -60,18 +60,18 @@ function setup() {
   vertices = [];
   vertices2 = [];
   
-  createCanvas(windowWidth, windowHeight, WEBGL)
+  createCanvas(windowWidth, windowHeight, WEBGL);
   smooth(8);
 }
 
 function draw() {
   background(background_col);
   // basic lighting setup
-  lights();
-  var moveX = map(mouseX, 0, width, -width, width);
-  var moveY = map(mouseY, 0, height, -height, height);
+  //lights();
+  var moveX = map(mouseX, 0, width, -latheRadius*2, latheRadius*2);
+  var moveY = map(mouseY, 0, height, -latheRadius*2, latheRadius*2);
   //console.log(camera());
-  camera(moveX,moveY,500,-width/2,0,0,0,1,0);
+  camera(moveX,moveY,latheRadius, -latheRadius,0,0,0,1,0);
   push();
   fill("#ffffff");
   noStroke();
@@ -110,6 +110,7 @@ function draw() {
   // fill arrays
   for (let i=0; i<=pts; i++) {
     vertices[i] = createVector();
+    vertices2[i] = createVector();
     vertices[i].x = latheRadius + sin(radians(angle))*radius;
     vertices[i].z = cos(radians(angle))*radius;
     angle=((360.0/pts)*i)+(frameCount*0.1);
@@ -120,7 +121,6 @@ function draw() {
   for (let i=1; i<=segments; i++) {
     for (let j=0; j<=pts; j++) {
       push();
-      vertices2[j] = createVector();
       vertices2[j].x = cos(radians(latheAngle))*vertices[j].x;
       vertices2[j].y = sin(radians(latheAngle))*vertices[j].x;
       vertices2[j].z = vertices[j].z;
@@ -133,7 +133,7 @@ function draw() {
       //noStroke();
       strokeWeight(strokeW);
       if (j>0) {
-        box(25);
+        box(10);
       }
       pop();
     }
@@ -144,7 +144,7 @@ function draw() {
     noFill();
     //fill(255, 255, 255);
     strokeWeight(strokeW);
-    beginShape(QUAD_STRIP);
+    beginShape(QUADS);
     for (let j=1; j<=pts; j++) {
       vertex(vertices2[j].x, vertices2[j].y, vertices2[j].z);
       vertices2[j].x = cos(radians(latheAngle))*vertices[j].x;

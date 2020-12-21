@@ -1,4 +1,4 @@
-/*let iframeObserver;
+let iframeObserver;
 
 let iframeOptions = {
   root: null,
@@ -12,7 +12,6 @@ let iframeCallback = (entries, iframeObserver) => {
       console.log(entry);
       entry.target.contentWindow.loop();
       console.log("Loop");
-      else if 
     } else {
       entry.target.contentWindow.noLoop();
       console.log("noLoop");
@@ -26,7 +25,9 @@ let iframeTargets = document.querySelectorAll("iframe");
 
 iframeTargets.forEach(iframeTarget => {
  iframeObserver.observe(iframeTarget);
-});*/
+});
+
+/*
 
 var iframes = document.querySelectorAll("iframe");
 
@@ -44,3 +45,6 @@ iframes.forEach(iframe => {
     iframe.contentWindow.noLoop();
   });
 });
+
+
+*/
