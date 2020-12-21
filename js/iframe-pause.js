@@ -1,4 +1,4 @@
-let iframeObserver;
+/*let iframeObserver;
 
 let iframeOptions = {
   root: null,
@@ -12,6 +12,7 @@ let iframeCallback = (entries, iframeObserver) => {
       console.log(entry);
       entry.target.contentWindow.loop();
       console.log("Loop");
+      else if 
     } else {
       entry.target.contentWindow.noLoop();
       console.log("noLoop");
@@ -25,4 +26,21 @@ let iframeTargets = document.querySelectorAll("iframe");
 
 iframeTargets.forEach(iframeTarget => {
  iframeObserver.observe(iframeTarget);
+});*/
+
+var iframes = document.querySelectorAll("iframe");
+
+iframes.forEach(iframe => {
+  console.log(iframe);
+  iframe.addEventListener("load", function () {
+    iframe.addEventListener("mouseenter", function () {
+      iframe.contentWindow.loop();
+      console.log(this + "Loop");
+    });
+    iframe.addEventListener("mouseleave", function () {
+      iframe.contentWindow.noLoop();
+      console.log(this + "noLoop");
+    });
+    iframe.contentWindow.noLoop();
+  });
 });

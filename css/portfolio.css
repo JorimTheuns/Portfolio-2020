@@ -43,7 +43,7 @@ section {
 section::before {
   content: " ";
   position: absolute;
-  top: calc((64px + ((100vh - 144px) / 2)) - 1px);
+  top: calc(50vh - 1px);
   width: 100%;
   height: 0;
   border-bottom: solid 2px;
@@ -384,8 +384,8 @@ svg * {
   overflow-y: hidden;
   padding-left: 64px;
   padding-right: 64px;
-  padding-bottom: 80px;
-  padding-top: 64px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 @media screen and (max-width: 596px) {
@@ -416,7 +416,7 @@ svg * {
 
 .part {
   /*max-width: 100vw;*/
-  min-width: min-content;
+  min-width: 500px;
   width: max-content;
   min-height: 0;
   height: 100%;
@@ -512,9 +512,9 @@ svg * {
   justify-content: flex-end;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc((100vh - 144px) / 2);
+  height: calc((100vh) / 2);
   width: auto;
-  padding: 0 0 16px 0;
+  padding: 64px 0 16px 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   transform-origin: bottom;
   transform: rotateX(90deg) translate(16px);
@@ -542,9 +542,9 @@ svg * {
   justify-content: flex-start;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc((100vh - 144px) / 2);
+  height: calc((100vh) / 2);
   width: auto;
-  padding: 16px 0 0 0;
+  padding: 16px 0 80px 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   transform-origin: top;
   transform: rotateX(90deg) translate(16px);
@@ -557,9 +557,11 @@ svg * {
   justify-content: center;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  height: calc(100vh - 144px);
+  height: calc(100vh);
   width: auto;
   padding: 0;
+  padding-top: 64px;
+  padding-bottom: 80px;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   padding-left: 0;
   transform-origin: center;
@@ -593,11 +595,14 @@ svg * {
 .part * svg,
 .part * video,
 .part * iframe {
-  background: #000;
   min-height: 0px;
   width: auto;
   max-width: calc(100vw - 96px);
   overflow: hidden;
+}
+
+.part * iframe{
+  background: #000;
 }
 
 .part * img {
@@ -622,19 +627,27 @@ a img {
 
 .part .top * {
   object-position: 0 100%;
-  max-height: calc((100vh - 144px) / 2);
+  max-height: calc(50vh - 80px);
   flex: 0 1 auto;
 }
 
 .part .bottom * {
   object-position: 0 0;
-  max-height: calc((100vh - 144px) / 2);
+  max-height: calc(50vh - 96px);
   flex: 0 1 auto;
 }
 
 .part .full * {
   max-height: calc((100vh - 144px));
   flex: 0 1 auto;
+}
+
+.part .contents {
+  max-width: 500px;
+}
+
+.part .contents * {
+  max-width: 100%;
 }
 
 @media screen and (max-width: 596px) {
@@ -679,7 +692,7 @@ video::before {
 
 .part video {
   object-fit: contain;
-  object-position: center;
+  object-position: left center;
   max-height: calc(100vh - 144px);
   width: auto;
   max-width: calc(100vw - 32px);
