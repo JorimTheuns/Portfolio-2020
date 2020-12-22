@@ -86,7 +86,7 @@ function updateCanvas(canvases) {
     var randY = (Math.random() * height);
     //console.log(width, height);
 
-    $.getJSON("/json/fractal_letter_maps.json", function (data) {
+    $.getJSON("json/fractal_letter_maps.json", function (data) {
       json = data;
       characters = data.characters;
       
