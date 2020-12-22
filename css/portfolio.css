@@ -358,6 +358,8 @@ svg * {
 
 
 
+
+
 @media screen and (max-width: 596px) {
   .section-title h1 {
     padding-left: 16px;
@@ -368,6 +370,7 @@ svg * {
   }
 
   .part.section-start {
+    margin-left: 64px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -612,7 +615,7 @@ svg * {
 .part * iframe {
   min-height: 0px;
   width: auto;
-  max-width: calc(100vw - 96px);
+  max-width: calc(100vw - 16px);
   overflow: hidden;
 }
 
@@ -623,7 +626,7 @@ svg * {
 .part * img {
   min-height: 0px;
   width: auto;
-  max-width: calc(100vw - 96px);
+  max-width: calc(100vw - 16px);
   overflow: hidden;
 }
 
@@ -636,7 +639,7 @@ svg * {
 a img {
   min-height: 0px;
   width: auto;
-  max-width: calc(100vw - 96px);
+  max-width: calc(100vw - 16px);
   cursor: pointer;
 }
 
