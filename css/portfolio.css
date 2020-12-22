@@ -437,8 +437,7 @@ svg * {
   min-height: 0;
   height: 100%;
   /*scroll-snap-align: start;*/
-  /*overflow-y: hidden;
-  overflow-x: hidden;*/
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -668,7 +667,7 @@ a img {
 
 @media screen and (max-width: 596px) {
   .part * * {
-    max-width: calc(100vw - 96px);
+    max-width: calc(100vw - 32px);
   }
 
   .part .contents {
