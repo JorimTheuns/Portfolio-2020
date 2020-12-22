@@ -402,7 +402,7 @@ svg * {
   grid-gap: calc(32px + 32 * ((100vw - 320px) / (1200)));
   overflow-y: hidden;
   padding-left: 64px;
-  padding-right: 0;
+  padding-right: 16px;
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -783,9 +783,9 @@ img.circle {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  height: 100%;
-  line-height: 32px;
-  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
 }
 
 .scroller.vertical * {
