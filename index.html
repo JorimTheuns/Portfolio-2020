@@ -13,7 +13,6 @@
 
 </head>
 
-
 <body class="grid grt">
   <div id="scroll-parent">
 
@@ -65,6 +64,16 @@
               </a>
             </div>
           </div>
+          <div class="part section-start">
+            <div class="full">
+              <h1>Colophon</h1>
+              <h3>This website was designed and coded with love by Jorim Theuns.</h3>
+              <img src="Assets/Intro/code.png">
+              <h3>Big thanks to:</h3><br><p>Evelien Nieuwenburg, Matus Solcany, Angela Tziafeta and Pranav Muppirishetti for their feedback and encouragement.</p>
+              <br>
+              <h3>Technologies used:</h3><br><p>Brackets code editior, Github pages, HTML, CSS, JavaScript, Jquery, P5.js, D3.js, Adobe Suite, Aframe.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -106,12 +115,12 @@
               <p>Hint: Click the pink links to read more!</p>
             </div>
           </div>
-          
+
           <div class="part">
             <div class="full contents">
               <h1 class=""><a href="#part1">Part 1: Origins</a></h1>
               <h2>Politics, culture and information</h2>
-              <img src="Assets/Dembrane/Us-vs-Them.png">
+              <img src="Assets/Dembrane/Projector%20table.png">
             </div>
           </div>
           <div class="part">
@@ -127,9 +136,9 @@
               <h2>Willingness to compromise</h2>
             </div>
             <div class="bottom contents">
-              <h1 class="quote">“...most of the people on the city council are incompetent and stubborn...”
-              </h1>
-              <p>- Member of the Eindhoven City Council</p>
+              <h2 class="quote">“...most of the people on the city council are incompetent and stubborn...”
+              </h2>
+              <p class="attribution">- Member of the Eindhoven City Council</p>
             </div>
           </div>
           <div class="part">
@@ -150,14 +159,14 @@
             <div class="full contents">
               <h1 class=""><a href="#part6">Part 6: Random Media</a></h1>
               <h2 class="bottom-pad">Onze Zetels and Random Radio</h2>
-              <img src="Assets/Dembrane/RandomRadio.png">
+              <img src="Assets/Dembrane/Random_Radio.png">
             </div>
           </div>
           <div class="part">
             <div class="full contents">
               <h1 class=""><a href="#part7">Part 7: Chaos theory</a></h1>
               <h2 class="bottom-pad">Is randomness chaotic?</h2>
-              <img src="Assets/Dembrane/Lorenz%20Attractor.png">
+              <iframe class="p5" src="lorenz.html"></iframe>
             </div>
           </div>
           <div class="part">
@@ -185,7 +194,15 @@
             <div class="bottom contents">
               <h2 class="quote">“...having many randomly selected panels could expand the bandwidth of democracy...”
               </h2>
-              <p>- Hubertus Hofkirchner</p>
+              <p class="attribution">- Hubertus Hofkirchner</p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="top contents">
+              <h1 class="">Part 10 onwards to be <a href="#continued">continued.</a></h1>
+            </div>
+            <div class="bottom contents">
+              <h2 class="">Portfolio content will be updated soon!</h2>
             </div>
           </div>
           <div class="part">
@@ -236,7 +253,7 @@
             <div class="full">
               <h1>QI on Sortition</h1>
               <p class="bottom-pad">I didn't know it at the time, but my thesis started serendipitously, as I watched the BBC show QI.</p>
-              <video controls playsinline preload="auto" poster="">
+              <video controls playsinline preload="auto" poster="Assets/Dembrane/QI_poster.png">
                 <source src="Assets/Dembrane/QI_sortition.mp4" type="video/mp4">
               </video>
               <p class="top-pad">Sorition, allthough very intruiging, did not immediatly lead me to further research. It was archived in my mind, and didn't resurface for years.</p>
@@ -269,9 +286,10 @@
             </div>
           </div>
           <div class="part">
-            <div class="full">
+            <div class="top">
               <h1>Political theory - Deep dive</h1>
-              <img src="Assets/Dembrane/8-reasons-thumbnail.png">
+            </div>
+            <div class="bottom">
               <p class="top-pad">Not having a great deal of experience in political theory, I needed to immerse myself in the field, and in the current state of the literature on Sortition. I summarised my initial findings in a <a class="" href="Assets/Dembrane/8-reasons_small.pdf">large format research poster</a> that would help me understand sortition in more detail.</p>
             </div>
           </div>
@@ -308,20 +326,22 @@
               </h4>
             </div>
             <div class="bottom">
-              <p>Member of the Eindhoven City Council</p>
+              <h1>"...at least random people wouldn’t be scared to compromise."</h1>
+              <p class="attribution">- Member of the Eindhoven City Council</p>
             </div>
           </div>
           <div class="part">
             <div class="top">
-              <p>VVD youth party board member</p>
+              <h1>"...it just matters that you can debate on the facts..."</h1>
             </div>
             <div class="bottom">
               <h4 class="quote">"Politics is crazy these days, if you compromise on the party line, there’s no way you’ll be asked to take a leadership role, so people don’t debate good faith anymore, you know, they only care about optics and ambition, especially on the national level […] with randomness it doesn’t matter if theres more women one year, or more men, or any of that rubbish: it just matters that you can debate on the facts and compromise without betraying ‘your team,’ I like that..."</h4>
+              <p class="attribution">- VVD youth party board member</p>
             </div>
           </div>
-          <div class="part">
+          <div class="part section-start" id="part4">
             <div class="top">
-              <h1 class="title">Trust</h1>
+              <h1 class="title">Field work</h1>
             </div>
             <div class="bottom">
               <h3>Sortition was promising, but most people would rather have the tyrant they know, over the randomly selected strangers they don't. The guiding question became: <span class="highlight">How can we learn to trust randomness?</span></h3>
@@ -333,7 +353,7 @@
               <h3>A podcast episode on random decision making.</h3>
             </div>
             <div class="bottom">
-              <p>As a part of my investigation on trusting randomness, I recorded myself for a whole day as I made made decsisions using coinflips and dice rolls. It was an intruiging process, and I discovered that coin flips and dice rolls aren't the best way to reduce descision fatigue, as you have to come up with the options beforehand. After a full day of seemingly random decsisions, I was exhausted.</p>
+              <p>As a part of my investigation on trusting randomness, I recorded myself for a whole day as I made made decisions using coinflips and dice rolls. It was an intruiging process, and I discovered that coin flips and dice rolls aren't the best way to reduce descision fatigue, as you have to come up with the options beforehand. After a full day of seemingly random decsisions, I was exhausted.</p>
               <br>
               <h3>Interested? Listen to the podcast here:</h3>
               <audio class="top-pad" controls>
@@ -349,14 +369,21 @@
               <p class="top-pad">One thing that struck me during the recording was how arbitrary my actions became. Anything could have happened, and I was highly concious of this. <a href="Assets/Dembrane/Random%20Walk%20edit.pdf">This poster</a> is my attempt to visualise everything that <span class="highlight">didn't</span> happen.</p>
             </div>
           </div>
-          <div class="part">
+          <div class="part section-start" id="part5">
             <div class="top">
-              <h1>The problem of <a href="https://en.wikipedia.org/wiki/Apophenia">Apophenia</a></h1>
+              <h1 class="title"><a href="https://en.wikipedia.org/wiki/Apophenia">Apophenia</a></h1>
             </div>
             <div class="bottom">
-              <p>One major hinderance to trusting randomness is Apophenia: the human tendency to see pattern in noise. It has been observed in many fields and millions of people fall for it.</p>
-              <br>
-              <p>"Apophenia is the tendency to perceive meaningful connections between unrelated things."</p>
+              <h2>"Apophenia is the tendency to perceive meaningful connections between unrelated things."</h2>
+              <p class="attribution">- Wikipedia</p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="top">
+              <h1>The problem of Apophenia</h1>
+            </div>
+            <div class="bottom">
+              <p>Apophenia can be a major hinderance to trusting randomness. It is the human tendency to see pattern in noise. It has been observed in many fields and millions of people fall for it.</p>
               <br>
               <a href="https://en.wikipedia.org/wiki/Gambler%27s_fallacy">~ Recognising patterns in lottery numbers</a><a href="https://en.wikipedia.org/wiki/Self-selection_bias">~ Feeling connected to horoscopes</a><a href="https://www.patheos.com/blogs/heavenlycreatures/2011/11/image-of-jesus-on-dogs-butt-gods-second-appearance/">~ Seeing religious imagery on a dog's backside</a>
             </div>
@@ -373,18 +400,27 @@
               <p>I continued to use Tarot for a few months, exploring what conditions enhanced or reduced the apophenic effect.</p>
             </div>
           </div>
+          <div class="part section-start" id="part6">
+            <div class="top">
+              <h1 class="title">Random media</h1>
+            </div>
+            <div class="bottom">
+              <p>To further explore the effects of apophenia and of randomisation on the consumption of information, I persued two experiments, Onze zetels and random radio. The second a "low-fi" prototype of the first.</p>
+            </div>
+          </div>
           <div class="part">
             <div class="full">
-              <img src="Assets/Dembrane/chairs-01.png">
+              <img src="Assets/Dembrane/monolith_chair.jpg">
+              <p>Monolith chair, by <a href="https://zankobal.com/">Zan Kobal</a>
             </div>
           </div>
           <div class="part">
             <div class="top">
-              <h1 class="title">Onze Zetels</h1>
+              <h1 class="">Onze Zetels</h1>
               <h3>(Our seats): Experiments in democratic empowerment through design.</h3>
             </div>
             <div class="bottom">
-              <p>Onze zetels was the first iteration of a holistic coming together of the sortition project. The idea was to randomly select 5 designers and have them design 5 different chairs or thrones that would have the ability to record and playback audio recordings of creator/audience responses to the question: "If you were in power, what would you do?"</p>
+              <p>Onze zetels was the first iteration of a holistic "coming together" of the sortition project. The idea was to randomly select 5 designers and have them design 5 different chairs or thrones that would have the ability to record and playback audio recordings of creator/audience responses to the question: "If you were in power, what would you do?"</p>
               <p><a href="Assets/Dembrane/onze_zetels.pdf">Preliminary project proposal (Dutch)</a></p>
             </div>
           </div>
@@ -409,18 +445,18 @@
               <p>I confess to feeling a little missunderstood, but I understood the critique: the project was fun, but didn't communicate the essense of the research. I went back to the drawing board.</p>
             </div>
           </div>
-          <div class="part">
-            <div class="full">
-              <img src="Assets/Dembrane/Lorenz%20Attractor.png">
-            </div>
-          </div>
-          <div class="part">
+          <div class="part section-start" id="part7">
             <div class="top">
               <h1 class="title">CHAOS</h1>
               <h3 class="">Is randomness chaotic?</h3>
             </div>
             <div class="bottom">
-              <p>People around me kept making allusions to chaos, a lack of structure. Randomness couldn't be a useful tool because it was chaotic. I picked up a book titled CHAOS, and started reading. I soon realised that randomness was NOT chaotic. </p>
+              <p>People around me kept making allusions to chaos, a lack of structure. Randomness couldn't be a useful tool because it was chaotic. I picked up <a href="https://en.wikipedia.org/wiki/Chaos:_Making_a_New_Science">a book titled CHAOS</a>, and started reading. I soon realised that randomness was NOT chaotic. </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="full">
+              <img src="Assets/Dembrane/Lorenz%20Attractor.png">
             </div>
           </div>
           <div class="part">
@@ -452,11 +488,27 @@
               <img src="Assets/Dembrane/barnesly-chaos.jpg">
             </div>
           </div>
+          <div class="part section-start">
+            <div class="top">
+              <h1 class="title">Experimentation</h1>
+            </div>
+            <div class="bottom">
+              <h3 class="">Fractal fonts</h3>
+            </div>
+          </div>
           <div class="part">
             <div class="full">
               <h1>Barnesly font</h1>
               <iframe class="p5" src="barnsley.html"></iframe>
               <p class="top-pad">Excited by the possibilities of creating fractals with random selection, I created the first 27 characters of what is to my knowledge, the worlds first truly fractal font. They cannot exist in an ordinary font file as they must be generated dynamically. They are neither bitmaps, nor vectors. They are sets of vector transformations that can <a href="Assets/Dembrane/S.jpg">generate fractal letterforms</a> at quasi-infinite resolution.</p>
+            </div>
+          </div>
+          <div class="part section-start">
+            <div class="top">
+              <h1 class="title">Randomisation</h1>
+            </div>
+            <div class="bottom">
+              <h3 class="">Randomised control trials and the Monte Carlo method</h3>
             </div>
           </div>
           <div class="part">
@@ -465,7 +517,7 @@
               <h3>The (un)structure of randomness</h3>
               <p class="bottom-pad">I was intruiged, what was the characteristic that made randomness essential in probing the deep structure of these relationships?</p>
               <iframe class="p5" src="recurrence.html"></iframe>
-              <p class="top-pad"> Chaos scientists in the 1980's developec a technique called reccurence plotting, that allowed them to find higher order structure in chaotic systems. I recreated these reccurence plots for a number of systems, including a simple random number generator, and what struck me was this: with randomness, you can see the boundary of the canvas! Large numbers of random inputs allow you to be sure that the structure of the output is reflecting the structure of the higher order system (the plot), rather than some prior bias (the function).</p>
+              <p class="top-pad"> Chaos scientists in the 1980's developed a technique called reccurence plotting, that allowed them to find higher order structure in chaotic systems. I recreated these reccurence plots for a number of systems, including a simple random number generator, and what struck me was this: with randomness, you can see the boundary of the canvas! Large numbers of random inputs allow you to be sure that the structure of the output is reflecting the structure of the higher order system (the plot), rather than some prior bias (the function).</p>
             </div>
           </div>
           <div class="part">
@@ -484,6 +536,14 @@
             <div class="bottom">
               <h3 class="bottom-pad">From my thesis: Strange Democracy</h3>
               <img src="Assets/Dembrane/Strange-Democracy-Cover.png">
+            </div>
+          </div>
+          <div class="part section-start">
+            <div class="top">
+              <h1 class="title">More Interviews</h1>
+            </div>
+            <div class="bottom">
+              <h3 class="">Experts in political theory, sortition and complexity.</h3>
             </div>
           </div>
           <div class="part">
@@ -505,65 +565,17 @@
               <h3 class="top-pad">Exerpt from interview with Hubertus Hofkirchner and John Burnheim</h3>
             </div>
           </div>
-          <div class="part">
+          <div class="part section-start" id="continued">
             <div class="top">
-              <h1 class="">Coping with disaster: COVID-19 and physical assault.</h1>
+              <h1 class="title">Portfolio to be continued...</h1>
             </div>
             <div class="bottom">
-              <p>Just as I started to interview people, covid-19 begun to wreak havoc, and I was assaulted after trying to help a woman who was being attacked. I suffered a concussion, and was unable to work for 4 weeks.
+              <h3 class="">Please come back later for more updates on the Dembrane story.</h3>
             </div>
           </div>
           <div class="part">
             <div class="full">
-              <h1>Inspired by disaster</h1>
-              <h3>It was early May, and COVID was laying bare enormous vulnerabilities in the hearts of our democracies. During one interview, Hubertus Hofkirchner </h3>
-              <iframe class="p5" src="recurrence.html"></iframe>
-              <p class="top-pad">Whil</p>
-            </div>
-          </div>
-          <div class="part">
-            <div class="full">
-              <h1>Barnesly ferns</h1>
-              <iframe class="p5" src="barnsley.html"></iframe>
-              <p>Jorim Theuns isn't a designer in the traditional sense. His talent lies in combining insights from research in a variety of fields, and communicating the outcomes skillfully.</p>
-            </div>
-          </div>
-          <div class="part">
-            <div class="top">
-              <h1>Exploring the design space</h1>
-            </div>
-            <div class="bottom">
-              <h2>Is there a root cause to political polarisation?</h2>
-            </div>
-          </div>
-          <div class="part">
-            <div class="top">
-              <h1>Divergent research</h1>
-            </div>
-            <div class="bottom">
-              <h2>Is there a root cause to political polarisation?</h2>
-            </div>
-          </div>
-          <div class="part">
-            <div class="top">
-              <h1 class="title">Current status</h1>
-            </div>
-            <div class="bottom">
-              <p>I felt that Dembrane had too much unexplored potential to leave it to gather dust. Luckilly, my enthusiasm was contagious enough to convince talented people to join me. Slowly but surely, we are working to bring Dembrane to life.</p>
-            </div>
-          </div>
-          <div class="part">
-            <div class="top">
-              <h1 class="">Hugo Pilate</h1>
-              <h3 class="bottom-pad">Service Design</h3>
-              <img class="" src="Assets/people/hugo.jpeg" style="max-width: 400px">
-              <p claSS="top-pad">A gifted designer with years of experience in using online platforms as spaces for deliberation. Hugo is an invaluable team-mate when transforming dembrane's strategic vision into tangible design assets.</p>
-            </div>
-            <div class="bottom">
-              <h1 class="">Yoann Latzer</h1>
-              <h3 class="bottom-pad">Web Technologies</h3>
-              <img src="Assets/people/yoann.jpg" style="max-width: 400px">
-              <p class="top-pad">A co-year from my bachelor at the University of Twente, Yoann has spent the past years specialising in full-stack web development. Yoann has the skills and expertise to translate dembrane into a scalable application.</p>
+            <iframe class="p5" src="balls-mouse.html"></iframe>
             </div>
           </div>
         </div>
@@ -597,22 +609,74 @@
           <div class="part">
             <div class="full wide-video">
               <h1>Outcome</h1>
-              <video controls playsinline preload="auto">
+              <video controls playsinline preload="auto" poster="Assets/Dembrane/draft-explod.jpg">
                 <source src="Assets/Unforgettable/EXPLOD.mp4" type="video/mp4">
               </video>
-            </div>
-          </div>
-          <div class="part">
-            <div class="top">
-              <img src="https://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg">
-            </div>
-            <div class="bottom">
-              <p>Jorim Theuns isn't a designer in the traditional sense. His talent lies in combining insights from research in a variety of fields, and communicating the outcomes skillfully.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
+    <section class="orange">
+      <div class="section-title">
+        <h1>Process Gold XR</h1>
+      </div>
+      <div class="section-carousel">
+        <div class="section-content">
+          <div class="part">
+            <div class="top">
+              <h1>Experimental VR data-dashboard</h1>
+            </div>
+            <div class="bottom">
+              <h3>In the summer of 2018, I was hired by ProcessGold B.V., now UiPath Process Mining, to implement a VR version of their process graph.</h3>
+            </div>
+          </div>
+          <div class="part">
+            <div class="full">
+                          <h3>Demo</h3>
+              <iframe class="p5" src="https://jorimtheuns.github.io/ProcessGoldXR/vis.html"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="blue">
+      <div class="section-title">
+        <h1>Unforgettable</h1>
+      </div>
+      <div class="section-carousel">
+        <div class="section-content">
+          <div class="part">
+            <div class="top">
+              <h1>Prizewinning Hackathon project</h1>
+            </div>
+            <div class="bottom">
+              <h3>Unforgettable was a project I worked on with my team: <span class="highlight">ExpLOD</span> during <a href="https://hackalod.com/">HackaLOD 2019.</a></h3>
+            </div>
+          </div>
+          <div class="part">
+            <div class="top">
+              <img src="https://hackalod.com/wp-content/uploads/2019/12/20191130a331136.jpg">
+            </div>
+            <div class="bottom">
+              <img src="https://hackalod.com/wp-content/uploads/2019/12/20191130a310130.jpg">
+              <p>Photos: Jacqueline van der Kort | KB</p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="full wide-video">
+              <h1>Outcome</h1>
+              <video controls playsinline preload="auto" poster="Assets/Dembrane/draft-explod.jpg">
+                <source src="Assets/Unforgettable/EXPLOD.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <section class="invert">
       <div class="section-title">
         <h1>Hobby: Zettelkasten</h1>
@@ -621,10 +685,10 @@
         <div class="section-content">
           <div class="part">
             <div class="top">
-              <h1>Github + Zettelkasten</h1>
+              <h1>Personal Knowledge Management Network</h1>
             </div>
             <div class="bottom">
-              <p>Jorim Theuns isn't a designer in the traditional sense. His talent lies in combining insights from research in a variety of fields, and communicating the outcomes skillfully.</p>
+              <p>As an avid note taker, I was always frustrated that after taking a note, it ususally ended up gathering dust in a folder somewhere. My collection of notes was exactly that, a collection, with a strict, folder-based heirachy. Putting the theory I had learned during Dembrane and Unforgettable into practise lead me to cultivate a knowledge management system based on the principles of antifragility and rhyzomatics, with techniques from the world of linked open data.</p>
             </div>
           </div>
           <div class="part">
@@ -634,26 +698,24 @@
           </div>
           <div class="part">
             <div class="top">
-              <img src="https://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg">
+              <h3>Notes, calendar, reminders and contacts. All from one database.</h3>
             </div>
             <div class="bottom">
-              <p>Jorim Theuns isn't a designer in the traditional sense. His talent lies in combining insights from research in a variety of fields, and communicating the outcomes skillfully.</p>
+              <p>Indead of siloing all my information based on the process it was involved with, I started storing all my data in one interoperable file format called Markdown. Notes could now refer to oneanother, calendar items could link to reminders or contacts and vice versa. This is based on the file management principle called "Pillars, pipelines, vaults." All my pipelines could now draw from the same data vault. </p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="full">
+              <img src="Assets/GitZettel/Noteplan-Typeora.png">
             </div>
           </div>
           <div class="part">
             <div class="top">
-              <img src="https://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg">
+              <h3>Technologies</h3>
             </div>
             <div class="bottom">
-              <p>Jorim Theuns isn't a designer in the traditional sense. His talent lies in combining insights from research in a variety of fields, and communicating the outcomes skillfully.</p>
-            </div>
-          </div>
-          <div class="part">
-            <div class="top">
-              <img src="https://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg">
-            </div>
-            <div class="bottom">
-              <p>Jorim Theuns isn't a designer in the traditional sense. His talent lies in combining insights from research in a variety of fields, and communicating the outcomes skillfully.</p>
+              <p>
+          This system is made possible through a cloudkit architecture, and is backed-up by automated commits to a private github repository using Cron-Jobs. Any app that can read markdown can now interface with the data vault. I currently use Obsidian to map the vault, Typeora to write long form, and Noteplan 3 to access the notes on my phone, push notifications, and to interface with reminders and calendars.</p>
             </div>
           </div>
         </div>

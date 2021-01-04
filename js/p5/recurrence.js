@@ -7,6 +7,10 @@ let aout = 0.5;
 let aout1 = 0.5;
 let aout2 = 0.5;
 
+let aOut = [];
+let bOut = [];
+let cOut = [];
+
 let bout = 0.5;
 let bout1 = 0.5;
 let bout2 = 0.5;
@@ -22,47 +26,55 @@ function setup() {
   colorMode(HSB, 1.0);
   background(0, 0.1);
   strokeWeight(2);
+  aOut[0] = 0;
+  bOut[0] = 0.1;
+  cOut[0] = 0.1;
 }
 
 function draw() {
-  background(0,0.03);
+  background(0, 0.03);
   rectMode(CENTER);
-    textAlign(CENTER, CENTER);
+  textAlign(CENTER, CENTER);
   push();
   noStroke();
   textSize(12);
   fill(0);
-  rect(width/2,height-50,width,100);
+  rect(width / 2, height - 50, width, 100);
   fill(255);
-  text("Perlin noise", width/6, height-50);
-  text("Logistic function", 2*width/4, height-50);
-  text("Randomness", (width/6)*5, height-50);
+  text("Perlin noise", width / 6, height - 50);
+  text("Logistic function", 2 * width / 4, height - 50);
+  text("Randomness", (width / 6) * 5, height - 50);
   pop();
   //push();
   //translate(0, 0, 800);
   //translate(50, 50, 50);
   //rotateY(millis()/1000.0);
   //translate(-50, -50, -50);
+  let picker = (floor(mouseX / 100))+1;
   for (let j = 20; j < 80; j++) {
-    r = (j/20.0);
-    let strokeHue = r/4.0;
+    r = (j / 20.0);
+    let strokeHue = r / 4.0;
     stroke(strokeHue, 1, 1);
     for (let i = 0; i < 7; i++) {
-      aout2 = aout1;
-      aout1 = aout;
-      aout = noise(millis()/(r*1000.0));
-      point(aout*width/3, aout2*(height-100));
+      for (let j = floor(width / 100) + 1; j > 0; j--) {
+        aOut[j] = aOut[j - 1];
+      }
+      aOut[0] = noise(millis() / (r * 1000.0));
+      point(aOut[0] * width / 3, aOut[picker] * (height - 100));
     }
   }
-  for (let j = 20; j < 80; j++) {
-    r = (j/20.0)+random(0.001);
-    let strokeHue = r/4.0;
+  for (let j = 100; j < 400; j++) {
+    let timeComp = (sin(millis())+1)*0.001;
+    //console.log(timeComp);
+    r = (j / 100.0)+timeComp;
+    let strokeHue = r / 4.0;
     stroke(strokeHue, 1, 1);
     for (let i = 0; i < 7; i++) {
-      bout2 = bout1;
-      bout1 = bout;
-      bout = r*bout*(1-bout);
-      point(bout*(width/3)+(width/3), bout2*(height-100));
+      for (let j = floor(width / 100) + 1; j > 0; j--) {
+        bOut[j] = bOut[j - 1];
+      }
+      bOut[0] = r * bOut[0] * (1 - bOut[0]);
+      point(bOut[0] * (width / 3) + (width / 3), bOut[picker] * (height - 100));
     }
   }
   //pop();
@@ -72,14 +84,15 @@ function draw() {
   //rotateY(millis()/10000.0);
   //translate(-500, -500, -500);
   for (let j = 20; j < 80; j++) {
-    r = (j/20.0);
-    let strokeHue = r/4.0;
+    r = (j / 20.0);
+    let strokeHue = r / 4.0;
     stroke(strokeHue, 1, 1);
     for (let i = 0; i < 7; i++) {
-      cout2 = cout1;
-      cout1 = cout;
-      cout = random(1);
-      point(cout*(width/3)+(width/3)+(width/3), cout1*(height-100));
+      for (let j = floor(width / 100) + 1; j > 0; j--) {
+        cOut[j] = cOut[j - 1];
+      }
+      cOut[0] = random(1);
+      point(cOut[0] * (width / 3) + (width / 3) + (width / 3), cOut[picker] * (height - 100));
     }
   }
   //pop();
