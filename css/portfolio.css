@@ -206,6 +206,48 @@ section.active::before {
   transform: scale(1, 1);
 }
 
+/* ORANGE */
+
+section.orange {
+  /*background: linear-gradient(-45deg,#E0CDC6,#C8B8A2);*/
+  color: #1F73C1;
+  background: #fff;
+}
+
+section.orange a,
+section.orange a * {
+  color: #E7AC4D;
+}
+
+section.orange a::after {
+  background: #E7AC4D;
+}
+
+section.orange span.highlight {
+  color: #4986CE;
+}
+
+/* thesis */
+
+section.thesis {
+  /*background: linear-gradient(-45deg,#E0CDC6,#C8B8A2);*/
+  color: #fff;
+  background: #434343;
+}
+
+section.thesis a,
+section.thesis a * {
+  color: #3797DB;
+}
+
+section.thesis a::after {
+  background: #3797DB;
+}
+
+section.thesis span.highlight {
+  color: #DB8B16;
+}
+
 /*END OF COLORS*/
 
 
@@ -635,6 +677,13 @@ svg * {
   .part * iframe {
     min-width: 500px;
   }
+
+  .part * object,
+  .part * svg,
+  .part * video,
+  .part * iframe {
+    max-width: calc(100vw - 80px)
+  }
 }
 
 a img {
@@ -923,7 +972,7 @@ br {
   /*text-indent: -0.39em;*/
 }
 
-*.attribution{
+*.attribution {
   align-self: flex-end;
   padding-top: 16px;
   padding-right: 64px;
