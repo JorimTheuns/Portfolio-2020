@@ -15,6 +15,7 @@
         var isMobile = /Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
         if(isMobile){
           alert("This website has not been optimised for this device. If possible, please revisit the page using a desktop operating system or a device running iOS.");
+          document.querySelector("#scroll-parent").removeClass("android");
       }
  
   </script>
@@ -23,7 +24,7 @@
 </head>
 
 <body class="grid grt">
-  <div id="scroll-parent">
+  <div id="scroll-parent" class="scroll-snapper">
 
 
     <section>
