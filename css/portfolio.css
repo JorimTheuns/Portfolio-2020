@@ -137,11 +137,11 @@ section span.highlight {
 
 section a,
 section a * {
-  color: #A64B5B
+  color: #CA8F91
 }
 
 section a::after {
-  background: #A64B5B;
+  background: #CA8F91;
 }
 
 
