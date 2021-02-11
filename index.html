@@ -9,15 +9,15 @@
   <script src="js/vendor/jquery-3.4.1.min.js"></script>
   <!--<script src="js/vendor/jquery.waypoints.min.js">
   </script>-->
-      <script type="text/javascript">
-        const userAgent = navigator.userAgent.toLowerCase();
- 
-        var isMobile = /Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-        if(isMobile){
-          alert("This website has not been optimised for this device. If possible, please revisit the page using a desktop operating system or a device running iOS.");
-          document.querySelector("#scroll-parent").removeClass("android");
-      }
- 
+  <script type="text/javascript">
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    var isMobile = /Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    if (isMobile) {
+      alert("This website has not been optimised for this device. If possible, please revisit the page using a desktop operating system or a device running iOS.");
+      document.querySelector("#scroll-parent").removeClass("android");
+    }
+
   </script>
 
 
@@ -79,9 +79,11 @@
               <h1>Colophon</h1>
               <h3>This website was designed and coded with love by Jorim Theuns.</h3>
               <img src="Assets/Intro/code.png">
-              <h3>Big thanks to:</h3><br><p>Evelien Nieuwenburg, Matus Solcany, Angela Tziafeta and Pranav Muppirishetti for their feedback and encouragement.</p>
+              <h3>Big thanks to:</h3><br>
+              <p>Evelien Nieuwenburg, Matus Solcany, Angela Tziafeta and Pranav Muppirishetti for their feedback and encouragement.</p>
               <br>
-              <h3>Technologies used:</h3><br><p>Brackets code editior, Github pages, HTML, CSS, JavaScript, Jquery, P5.js, D3.js, three.js, Adobe Suite, Aframe.</p>
+              <h3>Technologies used:</h3><br>
+              <p>Brackets code editior, Github pages, HTML, CSS, JavaScript, Jquery, P5.js, D3.js, three.js, Adobe Suite, Aframe.</p>
             </div>
           </div>
         </div>
@@ -95,7 +97,7 @@
       </div>
       <div class="section-carousel">
         <div class="section-content">
-          <div class="part peek">
+          <div class="part">
             <div class="top">
               <a href="https://dembrane.com">
                 <h1 class="title">Dembrane</h1>
@@ -585,14 +587,13 @@
           </div>
           <div class="part">
             <div class="full">
-            <iframe class="p5" src="balls-mouse.html"></iframe>
+              <iframe class="p5" src="balls-mouse.html"></iframe>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-
+    
     <section class="blue">
       <div class="section-title">
         <h1>Unforgettable</h1>
@@ -627,6 +628,29 @@
         </div>
       </div>
     </section>
+
+    <section class="matteo">
+      <div class="section-title">
+        <h1>Matteo</h1>
+      </div>
+      <div class="section-carousel">
+        <div class="section-content">
+          <div class="part peek">
+            <div class="top">
+              <h1>Portfolio website for an industrial designer</h1>
+            </div>
+            <div class="bottom">
+              <p>Matteo and Lena approached me to craft a  unique website to showcase Matteo's projects in Lena's distinctive style.</p>
+            </div>
+          </div>
+          <div class="part">
+            <div class="full">
+              <iframe class="p5" src="https://ecemnib.github.io/Matteo/index.html" style="background:#fff"></iframe>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </section>
     
     <section class="orange">
       <div class="section-title">
@@ -644,7 +668,7 @@
           </div>
           <div class="part">
             <div class="full">
-                          <h1>Demo</h1>
+              <h1>Demo</h1>
               <iframe class="p5" src="https://jorimtheuns.github.io/ProcessGoldXR/vis.html"></iframe>
               <p>Feel free to explore the demo! On desktop, you can walk around using the WASD keys and you can query nodes by clicking while the cursor (black circle) is over them. If using a VR headset, enter the scene by using your controller to click on the VR goggles in the bottom right. The demo will also work on mobile, but you will not be able to navigate the scene.</p>
             </div>
@@ -653,6 +677,33 @@
       </div>
     </section>
     
+    <section class="klm">
+      <div class="section-title">
+        <h1>KLM</h1>
+      </div>
+      <div class="section-carousel">
+        <div class="section-content">
+          <div class="part peek">
+            <div class="top">
+              <h1>Video for KLM's process automation hub</h1>
+            </div>
+            <div class="bottom">
+              <p>While working for UiPath, I was asked to create a trailer showcasing the work done by KLM's process automation hub. With no team and no budget; filming, audio, color grading, animation and editing were all up to me.</p>
+              <p>Looking back, there's a lot I learned from the experience and would do differently, but I'm proud of what I delivered, given the constraints.
+            </div>
+          </div>
+          <div class="part">
+            <div class="full">
+              <iframe class="p5" src="https://www.youtube.com/embed/UTMAX5EIsog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+
+    
+
     <section class="thesis">
       <div class="section-title">
         <h1>Bachelor's Thesis</h1>
@@ -675,7 +726,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="invert">
       <div class="section-title">
         <h1>Hobby: Zettelkasten</h1>
@@ -714,7 +765,7 @@
             </div>
             <div class="bottom">
               <p>
-          This system is made possible through a cloudkit architecture, and is backed-up by automated commits to a private github repository using Cron-Jobs. Any app that can read markdown can now interface with the data vault. I currently use Obsidian to map the vault, Typeora to write long form, and Noteplan 3 to access the notes on my phone, push notifications, and to interface with reminders and calendars.</p>
+                This system is made possible through a cloudkit architecture, and is backed-up by automated commits to a private github repository using Cron-Jobs. Any app that can read markdown can now interface with the data vault. I currently use Obsidian to map the vault, Typeora to write long form, and Noteplan 3 to access the notes on my phone, push notifications, and to interface with reminders and calendars.</p>
             </div>
           </div>
         </div>

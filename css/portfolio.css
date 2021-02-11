@@ -144,6 +144,65 @@ section a::after {
   background: #CA8F91;
 }
 
+/*MATTEO*/
+
+section.matteo {
+  background: #2E2382;
+  color: #fff;
+  border-color: #fff;
+}
+
+section.matteo * {
+  border-color: #fff;
+}
+
+section.matteo span.highlight {
+  color: #DDD9E9;
+}
+
+section.matteo a,
+section.matteo a * {
+  color: #4B4290;
+}
+
+section.matteo a::after {
+  background: #4B4290;
+}
+
+section.matteo iframe{
+  background:#fff;
+  border-radius: 25px;
+}
+
+/*KLM*/
+
+section.klm {
+  background: #00A1E4;
+  color: #fff;
+  border-color: #fff;
+}
+
+section.klm * {
+  border-color: #fff;
+}
+
+section.klm span.highlight {
+  color: #DDD9E9;
+}
+
+section.klm a,
+section.klm a * {
+  color: #4B4290;
+}
+
+section.klm a::after {
+  background: #4B4290;
+}
+
+section.klm iframe{
+  background:#fff;
+  border-radius: 25px;
+}
 
 /*GREY SECTION*/
 
@@ -175,8 +234,8 @@ section.grey a::after {
 
 section.blue {
   /*background: linear-gradient(-45deg,#E0CDC6,#C8B8A2);*/
-  color: #E1E5E8;
-  background: #355296;
+  color: #fff;
+  background: #041521;
 }
 
 section.blue span.highlight {
@@ -236,20 +295,24 @@ section.orange span.highlight {
 section.thesis {
   /*background: linear-gradient(-45deg,#E0CDC6,#C8B8A2);*/
   color: #fff;
-  background: #434343;
+  background: #5F708E;
 }
 
 section.thesis a,
 section.thesis a * {
-  color: #3797DB;
+  color: #E2979F;
 }
 
 section.thesis a::after {
-  background: #3797DB;
+  background: #E2979F;
 }
 
 section.thesis span.highlight {
-  color: #DB8B16;
+  color: #EAFEF6;
+}
+
+section.thesis iframe {
+  border-radius: 25px;
 }
 
 /*END OF COLORS*/
