@@ -58,6 +58,8 @@ section::before {
   transition: transform ease 2s;
 }
 
+@media screen and (min-width: 596px) {
+
 section {
   opacity: .1;
   transition: all ease .4s;
@@ -69,6 +71,8 @@ section .section-carousel{
 
 section .section-title{
   transform: translateX(-50px);
+}
+  
 }
 
 section.active {
