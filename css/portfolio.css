@@ -64,7 +64,11 @@ section {
 }
 
 section .section-carousel{
-  transform: translateX(50px);
+  transform: translateX(150px);
+}
+
+section .section-title{
+  transform: translateX(-50px);
 }
 
 section.active {
@@ -72,6 +76,10 @@ section.active {
 }
 
 section.active .section-carousel{
+  transform: translateX(0);
+}
+
+section.active .section-title{
   transform: translateX(0);
 }
 
