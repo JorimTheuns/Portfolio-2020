@@ -15,6 +15,7 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
   font-weight: normal;
+  background: #000;
 }
 
 html,
@@ -55,6 +56,23 @@ section::before {
   transform: scale(0, 1);
   transform-origin: left;
   transition: transform ease 2s;
+}
+
+section {
+  opacity: .1;
+  transition: all ease .4s;
+}
+
+section .section-carousel{
+  transform: translateX(50px);
+}
+
+section.active {
+  opacity: 1;
+}
+
+section.active .section-carousel{
+  transform: translateX(0);
 }
 
 a::after {
@@ -646,8 +664,8 @@ svg * {
   padding: 64px 0 16px 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   transform-origin: bottom;
-  transform: rotateX(90deg) translate(16px);
-  opacity: 0;
+  /*transform: rotateX(90deg) translate(16px);
+  opacity: 0;*/
 }
 
 .part .middle {
@@ -661,8 +679,8 @@ svg * {
   padding: 16px 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   transform-origin: center;
-  transform: rotateX(90deg) translate(16px);
-  opacity: 0;
+  /*transform: rotateX(90deg) translate(16px);
+  opacity: 0;*/
 }
 
 .part .bottom {
@@ -676,8 +694,8 @@ svg * {
   padding: 16px 0 80px 0;
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   transform-origin: top;
-  transform: rotateX(90deg) translate(16px);
-  opacity: 0;
+  /*transform: rotateX(90deg) translate(16px);
+  opacity: 0;*/
 }
 
 .part .full {
@@ -694,8 +712,8 @@ svg * {
   /*padding-right: calc(16px + 50 * ((100vw - 320px) / (1200)));*/
   padding-left: 0;
   transform-origin: center;
-  transform: rotateX(90deg) translate(16px);
-  opacity: 0;
+  /*transform: rotateX(90deg) translate(16px);
+  opacity: 0;*/
 }
 
 
