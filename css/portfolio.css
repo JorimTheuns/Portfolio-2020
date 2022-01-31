@@ -31,7 +31,7 @@ body {
 
 
 #scroll-parent.scroll-snapper {
-  scroll-snap-type: y mandatory;
+  /*scroll-snap-type: y mandatory;*/
   -webkit-overflow-scrolling: touch;
 }
 
